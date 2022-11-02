@@ -1,0 +1,43 @@
+.container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.contact{
+    display: flex;
+    align-items: center;
+    gap: 1.5vh;
+    margin-top: 3vh;
+}
+
+.icon{
+    height: 5vh;
+    width: 5vh;
+    border-radius: .5rem;
+    background-color: #4f82fd50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputs{
+    flex: 0.75;
+    margin-top: 5vh;
+    min-width: 300px;
+}
+
+@media screen and (max-width: 768px){
+    .text{
+        width: 90%;
+    }
+}
+
+.sendtext{
+    color: rgb(168, 255, 38);
+    background-color: rgba(172, 255, 47, 0.15);
+    border-radius: 1vh;
+    padding: 0.5vh 0.5vw;
+    font-weight: 600;
+    border: 1px solid rgb(168, 255, 38);
+}
