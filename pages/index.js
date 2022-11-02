@@ -16,7 +16,7 @@ export default function Home() {
       <Top height="80vh">
         <div className={styles.top}>
           <h1>Focus on your business</h1>
-          <h2>We'll handle your website</h2>
+          <h2>We can handle your website</h2>
           <button className={styles.button}>Get Started</button>
         </div>
       </Top>

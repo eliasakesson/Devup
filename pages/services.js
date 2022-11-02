@@ -56,12 +56,12 @@ function Services(){
         iconbg: '#8587fe50',
         description: 'We develop websites for you, from simple landing pages to complex web applications.',
         skills: [
-            <FaHtml5 color='#e34c26' />,
-            <FaCss3Alt color='#264de4' />,
-            <SiJavascript color='#f0db4f' />,
-            <SiReact color='#7cc5d9' />,
-            <SiGithub color='#333' />,
-            <SiFirebase color='#ffca28' />
+            <FaHtml5 key={1} color='#e34c26' />,
+            <FaCss3Alt key={2} color='#264de4' />,
+            <SiJavascript key={3} color='#f0db4f' />,
+            <SiReact key={4} color='#7cc5d9' />,
+            <SiGithub key={5} color='#333' />,
+            <SiFirebase key={6} color='#ffca28' />
         ],
     }, {
         name: 'Game Development',
@@ -70,8 +70,8 @@ function Services(){
         iconbg: '#FDCF7650',
         description: 'We develop games for you, from simple 2D games to complex 3D games.',
         skills: [
-            <SiUnity color='#333' />,
-            <SiCsharp color='#953dad' />
+            <SiUnity key={1} color='#333' />,
+            <SiCsharp key={2} color='#953dad' />
         ],
     }, {
         name: 'Mobile App Development',
@@ -80,7 +80,7 @@ function Services(){
         iconbg: '#CA7E8D50',
         description: 'We develop mobile applications for you, from simple applications to complex applications.',
         skills: [
-            <SiReact color='#7cc5d9' />
+            <SiReact key={1} color='#7cc5d9' />
         ],
     }]
 

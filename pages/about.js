@@ -10,6 +10,7 @@ import {
     ZoomableGroup,
     Marker
   } from "react-simple-maps";
+import Image from 'next/image'
 
 export default function about() {
 
@@ -61,7 +62,7 @@ export default function about() {
                 <div className={styles.team}>
                     <h2>Our team</h2>
                     <div className={styles.member}>
-                        <img src="/mepng.png" alt=" " />
+                        <Image src="/mepng.png" alt=" " />
                         <div className={styles.text}>
                             <h5>Elias Åkesson</h5>
                             <p>CEO</p>

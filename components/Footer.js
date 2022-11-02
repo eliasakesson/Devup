@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import styles from '../styles/navbar.module.css'
@@ -13,7 +14,7 @@ export default function Footer() {
         <Link href='/contact'>Contact</Link>
       </div>
       <div className={styles.footerlogo}>
-        <Link style={{textDecoration: "none"}} href="/"><div className={styles.logo}><img src='/logo.png' alt='' /><h2>DevUp</h2></div></Link>
+        <Link style={{textDecoration: "none"}} href="/"><div className={styles.logo}><Image src='/logo.png' alt='' /><h2>DevUp</h2></div></Link>
       </div>
     </div>
   )

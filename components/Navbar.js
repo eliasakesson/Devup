@@ -3,6 +3,7 @@ import styles from '../styles/navbar.module.css'
 import Link from 'next/link'
 import {useRouter} from 'next/router'
 import { useMediaQuery } from 'react-responsive'
+import Image from 'next/image'
 
 export default function Navbar(props) {
 
@@ -20,7 +21,7 @@ export default function Navbar(props) {
 
   return (
     <header ref={ref} className={`${styles.container} ${(scrollY < 72) ? styles.notfixed : ""}`}>
-        <Link style={{textDecoration: "none"}} href="/"><div className={styles.logo}><img src='/logo.png' alt='' /><h2>DevUp</h2></div></Link>
+        <Link style={{textDecoration: "none"}} href="/"><div className={styles.logo}><Image src='/logo.png' alt='' /><h2>DevUp</h2></div></Link>
         <Nav />
     </header>
   )
