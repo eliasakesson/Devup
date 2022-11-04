@@ -11,6 +11,7 @@ import {
     Marker
   } from "react-simple-maps";
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function about() {
 
@@ -25,7 +26,6 @@ export default function about() {
         <div className='container'>
             <h4>Om oss</h4>
             <h1>Vi är DevUp</h1>
-            <p>Vi är en webbutvecklingsbyrå som ligger i Värnamo, Sverige.</p>
             <div className={styles.wrapper}>
                 <div className={styles.map}>
                     <ComposableMap projection="geoMercator">
@@ -59,15 +59,16 @@ export default function about() {
                         </ZoomableGroup>
                     </ComposableMap>
                 </div>
-                <div className={styles.team}>
-                    <h2>Vårt team</h2>
-                    <div className={styles.member}>
-                        <Image src="/mepng.png" alt=" " width={1000} height={1000} />
-                        <div className={styles.text}>
-                            <h5>Elias Åkesson</h5>
-                            <p>CEO</p>
-                        </div>
+                <div className={styles.text}>
+                    <h3>Om oss</h3>
+                    <p>Vi är en webbutvecklingsbyrå som ligger i Värnamo, Sverige.</p>
+                    <p>Vår passion är att skapa hemsidor som är användarvänliga,<br /> och som uppmanar till köp.</p>
+                    <div className='quote'>
+                        <span>“</span>
+                        <p>We don’t just build websites,<br /> we build websites that SELLS</p>
+                        <span>”</span>
                     </div>
+                    <Link className='bluebtn' href="/contact">Kontakta Oss</Link>
                 </div>
             </div>
             </div>

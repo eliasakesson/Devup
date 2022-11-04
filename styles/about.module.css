@@ -40,46 +40,11 @@
     stroke: var(--text-grey);
 }
 
-.team{
-    flex: 1;
+.text{
+    width: 50%;
+    max-width: 40vw;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-}
-
-.member{
-    background-color: white;
-    width: 13vw;
-    min-width: 28vh;
-    height: 36vh;
-    border-radius: 2vh;
-    margin-top: 3vh;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-shadow: var(--soft-shadow);
-}
-
-.member img{
-    width: 100%;
-    aspect-ratio: 1;
-    object-fit: cover;
-}
-
-.member .text{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex: 1;
-    background-color: white;
-    width: 100%;
-    box-shadow: 0px -5px 25px -3px rgba(0,0,0,0.1);
-}
-
-@media screen and (max-width: 768px){
-    .team{
-        align-items: center;
-    }
+    align-items: flex-start;
+    gap: 2vh;
 }
