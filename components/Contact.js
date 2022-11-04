@@ -40,41 +40,41 @@ export default function Contact() {
   return (
     <div className={`${styles.container} container`}>
       <div className={styles.text}>
-        <h4>Contact</h4>
-        <h1>Got A Project Or<br /> Partnership In Mind?</h1>
+        <h4>Kontakt</h4>
+        <h1>Har du en projekt<br /> i åtanke?</h1>
         <div className={styles.contact}>
           <div className={styles.icon}>
               <MdEmail size={20} color="#8587fe" />
           </div>
           <div>
             <h5>Email:</h5>
-            <a href='mailto:elias@business.rich' className='link' >elias@business.rich</a>
+            <a href='mailto:akessonelias@gmail.com' className='link' >akessonelias@gmail.com</a>
           </div>
         </div>
       </div>
       <form className={styles.inputs} onSubmit={sendEmail}>
-        <h3>Send email</h3>
+        <h3>Skicka ett mejl</h3>
         <div style={{display: "flex"}}>
           <div style={{flex: 1}} className='inputbox'>
             <input name='name' type="text" required value={name} onChange={(e) => setName(e.target.value)} disabled={emailSuccess} />
-            <label>{!emailSuccess && "Name"}</label>
+            <label>{!emailSuccess && "Namn"}</label>
           </div>
           <div style={{flex: 1.5}} className='inputbox'>
             <input name='email' type="text" required value={email} onChange={(e) => setEmail(e.target.value)} disabled={emailSuccess} />
-            <label>{!emailSuccess && "Email"}</label>
+            <label>{!emailSuccess && "Mejladdress"}</label>
           </div>
         </div>
         <div className='inputbox'>
           <input name='subject' type="text" required value={subject} onChange={(e) => setSubject(e.target.value)} disabled={emailSuccess} />
-          <label>{!emailSuccess && "Subject"}</label>
+          <label>{!emailSuccess && "Ämne"}</label>
         </div>
         <div className='inputbox'>
           <textarea name='message' rows="6" placeholder=' ' value={message} onChange={(e) => setMessage(e.target.value)} disabled={emailSuccess} />
-          <label>{!emailSuccess && "Message"}</label>
+          <label>{!emailSuccess && "Meddelande"}</label>
         </div>
         <div style={{display: "flex", alignItems: "center", marginTop: "2rem", gap: "1rem"}}>
-          <input type="submit" style={{marginLeft: "1rem"}} className='bluebtn' value={emailSuccess ? "Reset form" : "Send email"} />
-          {emailSuccess && <p className={styles.sendtext}>Email sent</p>}
+          <input type="submit" style={{marginLeft: "1rem"}} className='bluebtn' value={emailSuccess ? "Skicka ett till" : "Skicka"} />
+          {emailSuccess && <p className={styles.sendtext}>Mejl skickat</p>}
         </div>
       </form>
     </div>

@@ -21,7 +21,7 @@ export default function Navbar(props) {
 
   return (
     <header ref={ref} className={`${styles.container} ${(scrollY < 72) ? styles.notfixed : ""}`}>
-        <Link style={{textDecoration: "none"}} href="/"><div className={styles.logo}><Image src='/logo.png' alt='' /><h2>DevUp</h2></div></Link>
+        <Link style={{textDecoration: "none"}} href="/"><div className={styles.logo}><Image src='/logo.png' alt='' width={1000} height={1000} /><h2>DevUp</h2></div></Link>
         <Nav />
     </header>
   )
@@ -37,11 +37,11 @@ function Nav(props){
     // ]},
 
     const navItemProps = [
-        {label: "Home", link: "/"},
-        {label: "Projects", link: "/projects"},
-        {label: "Services", link: "/services"},
-        {label: "About", link: "/about"},
-        {label: "Contact", link: "/contact"}
+        {label: "Hem", link: "/"},
+        {label: "Tjänster", link: "/services"},
+        {label: "Portfolio", link: "/portfolio"},
+        {label: "Om oss", link: "/about"},
+        {label: "Kontakt", link: "/contact"}
     ]
 
     const [burgerOpen, setBurgerOpen] = useState(false)

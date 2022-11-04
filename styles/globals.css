@@ -62,9 +62,20 @@ p{
   color: var(--text-grey);
 }
 
+h1 span, h2 span, h3 span, h4 span, h5 span, p span{
+  color: var(--active-accent);
+}
+
 .container{
+  position: relative;
+  max-width: 100%;
   padding: 15vh 10vw;
   min-height: calc(100vh - var(--footer-height));
+  overflow: hidden;
+}
+
+.title{
+  text-align: center;
 }
 
 .bluebtn{
@@ -84,10 +95,31 @@ p{
   color: #fff;
 }
 
+.pulsating{
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse{
+  0%{
+    box-shadow: 0px 0px 0px 0px rgba(34, 139, 230, 0.1);
+  }
+  25%{
+    box-shadow: 0px 0px 20px 0px rgba(34, 139, 230, 0.5);
+  }
+  50%{
+    box-shadow: 0px 0px 0px 0px rgba(34, 139, 230, 0.1);
+  }
+}
+
 .link{
   color: var(--active-accent);
   font-weight: 400; 
   transition: all 0.3s ease;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: fit-content;
 }
 
 .inputbox{
@@ -130,7 +162,6 @@ p{
 .skills{
   display: flex;
   gap: 3vw;
-  margin: 2vh 0;
 }
 
 .skills svg{

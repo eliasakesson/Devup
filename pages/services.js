@@ -8,8 +8,10 @@ import Footer from '../components/Footer'
 import { IoGameController } from 'react-icons/io5'
 import { FaDesktop, FaApple, FaHtml5, FaCss3Alt } from 'react-icons/fa'
 import { MdWeb } from 'react-icons/md'
-import { SiJavascript, SiReact, SiGithub, SiFirebase, SiCsharp, SiUnity } from 'react-icons/si'
+import { SiJavascript, SiReact, SiGithub, SiFirebase, SiCsharp, SiUnity, SiExpo } from 'react-icons/si'
 import Link from 'next/link'
+import Image from 'next/image'
+import { CgArrowLongRight } from 'react-icons/cg'
 
 export default function services() {
   return (
@@ -19,26 +21,9 @@ export default function services() {
         </Head>
         <Navbar />
         <div className="container">
-            <h1>Services</h1>
-            <div className={styles.cards}>
-                <a href="#web" className={styles.card}>
-                    <div className={styles.icon} style={{backgroundColor: "#8587fe50"}}>
-                        <MdWeb color='#8587fe' size={25} />
-                    </div>
-                    <h3>Web<br /> Development</h3>
-                </a>
-                <a href="#game" className={styles.card}>
-                    <div className={styles.icon} style={{backgroundColor: "#FDCF7650"}}>
-                        <IoGameController color='#FDCF76' size={25} />
-                    </div>
-                    <h3>Game<br /> Development</h3>
-                </a>
-                <a href="#mobile" className={styles.card}>
-                    <div className={styles.icon} style={{backgroundColor: "#CA7E8D50"}}>
-                        <FaApple color='#CA7E8D' size={25} />
-                    </div>
-                    <h3>Mobile App<br /> Development</h3>
-                </a>
+            <div className='title'>
+                <h4>Tjänster</h4>
+                <h1>Våra Tjänster</h1>
             </div>
             <Services />
         </div>
@@ -50,37 +35,37 @@ export default function services() {
 function Services(){
 
     const services = [{
-        name: 'Web Development',
+        name: 'Webbutveckling',
         id: 'web',
-        icon: <MdWeb color='#8587fe' />,
-        iconbg: '#8587fe50',
-        description: 'We develop websites for you, from simple landing pages to complex web applications.',
+        image: "/images/webdev.png",
+        description: 'Vi utvecklar hemsidor åt dig, allt ifrån enkla ensidiga hemsidor till stora flersidiga hemsidor.',
         skills: [
             <FaHtml5 key={1} color='#e34c26' />,
             <FaCss3Alt key={2} color='#264de4' />,
             <SiJavascript key={3} color='#f0db4f' />,
             <SiReact key={4} color='#7cc5d9' />,
-            <SiGithub key={5} color='#333' />,
-            <SiFirebase key={6} color='#ffca28' />
+            <SiGithub key={5} color='#333' />
         ],
     }, {
-        name: 'Game Development',
-        id: 'game',
-        icon: <IoGameController color='#FDCF76' />,
-        iconbg: '#FDCF7650',
-        description: 'We develop games for you, from simple 2D games to complex 3D games.',
+        name: 'Webb Appar',
+        id: 'app',
+        image: "/images/webapps.png",
+        description: 'Vi utvecklar webbapplikationer åt dig, allt ifrån enkla applikationer till komplexa applikationer med databaser och inloggning.',
         skills: [
-            <SiUnity key={1} color='#333' />,
-            <SiCsharp key={2} color='#953dad' />
+            <SiJavascript key={3} color='#f0db4f' />,
+            <SiReact key={4} color='#7cc5d9' />,
+            <SiGithub key={3} color='#333' />,
+            <SiFirebase key={4} color='#ffca28' />
         ],
     }, {
-        name: 'Mobile App Development',
+        name: 'Mobil Appar',
         id: 'mobile',
-        icon: <FaApple color='#CA7E8D' />,
-        iconbg: '#CA7E8D50',
-        description: 'We develop mobile applications for you, from simple applications to complex applications.',
+        image: "/images/mobileapps.png",
+        description: 'Vi utvecklar mobilapplikationer åt dig, allt ifrån enkla appar till komplexa appar med databaser och inloggning.',
         skills: [
-            <SiReact key={1} color='#7cc5d9' />
+            <SiReact key={1} color='#7cc5d9' />,
+            <SiExpo key={2} color='#1173b6' />,
+            <SiFirebase key={3} color='#ffca28' />
         ],
     }]
 
@@ -88,14 +73,8 @@ function Services(){
         <>
             {services.map((service, index) => (
                 <section key={index} id={service.id} className={styles.service}>
-                    <aside className={styles.card}>
-                        <div className={`${styles.icon} icon`} style={{backgroundColor: service.iconbg}}>
-                            {service.icon}
-                        </div>
+                    <div className={styles.text}>
                         <h3>{service.name}</h3>
-                    </aside>
-                    <div className={styles.about}>
-                        <h2>{service.name}</h2>
                         <div className="skills">
                             {service.skills.map((skill, index) => (
                                 <div className={styles.skill} key={index}>
@@ -104,9 +83,10 @@ function Services(){
                             ))}
                         </div>
                         <p>{service.description}</p>
-                        <div className={styles.link}>
-                            <Link className='bluebtn' href="/contact">Contact Us</Link>
-                        </div>
+                        <Link className='link' href="/contact">Mer Info<CgArrowLongRight /></Link>
+                    </div>
+                    <div className={styles.image}>
+                        <Image src={service.image} alt="" width={1280} height={720} />
                     </div>
                 </section>
             ))}

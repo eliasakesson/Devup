@@ -1,0 +1,19 @@
+[{
+    "title": "Aschoo",
+    "description": "Aschoo är ett skolverktyg som låter dig skapa uppgifter och öva glosor. Det är en webbaserad applikation som kan nås från vilken enhet som helst med en internetanslutning.",
+    "image": "/images/aschoo.png",
+    "link": "https://aschoo.netlify.app",
+    "category": "WebApp"
+}, {
+    "title": "Whiteout",
+    "description": "Whiteout är en webbsida för en spelutvecklingsstudio. Det är en statisk webbplats som är byggd med HTML, CSS och JavaScript.",
+    "image": "/images/whiteout.png",
+    "link": "https://whiteout.netlify.app",
+    "category": "Website"
+}, {
+    "title": "EProjects",
+    "description": "EProjects är en webbplats för undervisning och lärande om elektronik och programmering. Det är en gratis webbplats där alla kan dela sin kunskap.",
+    "image": "/images/eprojects.png",
+    "link": "https://eprojects.netlify.app",
+    "category": "WebApp"
+}]

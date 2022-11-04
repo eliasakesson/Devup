@@ -1,23 +1,23 @@
 .container{
     width: 100%;
-    height: calc(var(--navbar-height) + 1px);
+    height: var(--navbar-height);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 10vw;
+    padding: 0 5vw;
     top: 0;
     left: 0;
     z-index: 100;
     background-color: var(--navbar-bg);
     border-bottom: 1px solid var(--border);
     position: fixed;
-    transition: 0.25ms;
+    transition: height 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), color 0.1s;
 }
 
 .notfixed.container{
     border-bottom: none;
     background-color: transparent;
-    height: var(--navbar-height);
+    height: var(--footer-height);
 }
 
 .container:first-child{
@@ -118,6 +118,10 @@
 }
 
 @media screen and (max-width: 768px) {
+    .container{
+        background-color: white !important;
+        border-bottom: 1px solid var(--border) !important;
+    }
     .nav{
         position: absolute;
         left: 0;

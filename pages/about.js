@@ -23,9 +23,9 @@ export default function about() {
         </Head>
         <Navbar />
         <div className='container'>
-            <h4>About</h4>
-            <h1>We are DevUp</h1>
-            <p>We are a programming agency based in Värnamo, Sweden.</p>
+            <h4>Om oss</h4>
+            <h1>Vi är DevUp</h1>
+            <p>Vi är en webbutvecklingsbyrå som ligger i Värnamo, Sverige.</p>
             <div className={styles.wrapper}>
                 <div className={styles.map}>
                     <ComposableMap projection="geoMercator">
@@ -53,16 +53,16 @@ export default function about() {
                                     textAnchor="middle"
                                     y={3}
                                 >
-                                    Värnamo, Sweden
+                                    Värnamo, Sverige
                                 </text>
                             </Marker>
                         </ZoomableGroup>
                     </ComposableMap>
                 </div>
                 <div className={styles.team}>
-                    <h2>Our team</h2>
+                    <h2>Vårt team</h2>
                     <div className={styles.member}>
-                        <Image src="/mepng.png" alt=" " />
+                        <Image src="/mepng.png" alt=" " width={1000} height={1000} />
                         <div className={styles.text}>
                             <h5>Elias Åkesson</h5>
                             <p>CEO</p>
