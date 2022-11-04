@@ -8,7 +8,11 @@ import Image from 'next/image'
 import Head from 'next/head'
 
 export default function portfolio() {
+  return <Portfolio />
+}
 
+function Portfolio() {
+  
   const [category, setCategory] = useState("All")
 
   let buttonLeft = category === "All" ? 0 : category === "Website" ? 25 : category === "WebApp" ? 50 : 75
