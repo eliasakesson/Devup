@@ -33,7 +33,7 @@ export default function Hero() {
       <div className={styles.wrapper} style={{transform: `rotateY(${x}deg) rotateX(${-y}deg)`}}>
         <div className={styles.text}>
           <h1>Upptäck den nya<br /> generationen inom<br /> <span>webbutveckling</span></h1>
-          <button className='bluebtn pulsating'>Låt oss börja</button>
+          <a href='#services' className='bluebtn pulsating'>Låt oss börja</a>
         </div>
         <div className={styles.image}>
           <Image src='/images/hero.png' alt='Hero Image' width={1000} height={1000} />

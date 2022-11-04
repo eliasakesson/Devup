@@ -12,7 +12,7 @@ export default function SlidingText(props) {
   }, [])
 
   return (
-    <div style={{width: "100%", overflow: "hidden"}}>
+    <div style={{width: "100%", overflow: "hidden", marginTop: "10vh"}}>
       <div style={{transform: `translateX(${scrollY * props.speed}vw)`, padding: "5vh 0"}}>
         <h3 style={{fontSize: "10vh", fontWeight: "500"}}>{props.text}</h3>
       </div>

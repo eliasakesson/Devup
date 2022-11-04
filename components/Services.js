@@ -9,7 +9,7 @@ export default function Services() {
 
   return (
     <section className={styles.container}>
-      <div className={styles.sticky}>
+      <div id='services' className={styles.sticky}>
         <h4>Våra Tjänster</h4>
         <h2>Spara tid inom ditt företag genom att<br /> utnyttja våra tjänster</h2>
       </div>

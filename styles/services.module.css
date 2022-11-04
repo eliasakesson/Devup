@@ -7,6 +7,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    scroll-margin-top: 15vh;
 }
 
 .cards{
