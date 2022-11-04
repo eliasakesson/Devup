@@ -19,7 +19,7 @@ export default function about() {
   return (
     <>
         <Head>
-            <title>About - DevUp</title>
+            <title>Om oss - DevUp</title>
         </Head>
         <Navbar />
         <div className='container'>

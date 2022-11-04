@@ -17,7 +17,7 @@ export default function services() {
   return (
     <>
         <Head>
-            <title>Services - DevUp</title>
+            <title>Tjänster - DevUp</title>
         </Head>
         <Navbar />
         <div className="container">

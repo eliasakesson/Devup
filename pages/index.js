@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Home - DevUp</title>
+        <title>Hem - DevUp</title>
       </Head>
       <Navbar notFixed />  
       <Hero />

@@ -10,7 +10,7 @@ export default function contact() {
   return (
     <>
         <Head>
-            <title>Contact - DevUp</title>
+            <title>Kontakt - DevUp</title>
         </Head>
         <Navbar />
         <Contact />
