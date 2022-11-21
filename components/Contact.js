@@ -48,7 +48,7 @@ export default function Contact() {
           </div>
           <div>
             <h5>Email:</h5>
-            <a href='mailto:akessonelias@gmail.com' className='link' >akessonelias@gmail.com</a>
+            <a href='mailto:devupwebagency@gmail.com' className='link' >devupwebagency@gmail.com</a>
           </div>
         </div>
       </div>
