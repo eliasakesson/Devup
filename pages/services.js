@@ -38,7 +38,7 @@ function Services(){
         name: 'Webbutveckling',
         id: 'web',
         image: "/images/webdev.png",
-        description: 'Vi utvecklar hemsidor åt dig, allt ifrån enkla ensidiga hemsidor till stora flersidiga hemsidor.',
+        description: 'Vi utvecklar hemsidor åt dig, allt ifrån enkla ensidiga hemsidor till mer komplicerade hemsidor. Vi använder oss av de senaste teknikerna för att skapa en snabb och responsiv hemsida.',
         skills: [
             <FaHtml5 key={1} color='#e34c26' />,
             <FaCss3Alt key={2} color='#264de4' />,
@@ -50,7 +50,7 @@ function Services(){
         name: 'Webb Appar',
         id: 'app',
         image: "/images/webapps.png",
-        description: 'Vi utvecklar webbapplikationer åt dig, allt ifrån enkla applikationer till komplexa applikationer med databaser och inloggning.',
+        description: 'Våra webbappar är skapade med funktion och användarvänlighet i åtanke. De senaste teknikerna används för att skapa en snabb och responsiv webbapp.',
         skills: [
             <SiJavascript key={3} color='#f0db4f' />,
             <SiReact key={4} color='#7cc5d9' />,
@@ -61,7 +61,7 @@ function Services(){
         name: 'Mobil Appar',
         id: 'mobile',
         image: "/images/mobileapps.png",
-        description: 'Vi utvecklar mobilapplikationer åt dig, allt ifrån enkla appar till komplexa appar med databaser och inloggning.',
+        description: 'Vi utvecklar mobilappar som får dig att sticka ut från mängden. De senaste teknikerna används för att skapa en snabb och responsiv mobilapp.',
         skills: [
             <SiReact key={1} color='#7cc5d9' />,
             <SiExpo key={2} color='#1173b6' />,
@@ -83,7 +83,7 @@ function Services(){
                             ))}
                         </div>
                         <p>{service.description}</p>
-                        <Link className='link' href="/contact">Mer Info<CgArrowLongRight /></Link>
+                        <Link className='link' href="/contact">Kontakta Oss<CgArrowLongRight /></Link>
                     </div>
                     <div className={styles.image}>
                         <Image src={service.image} alt="" width={1280} height={720} />

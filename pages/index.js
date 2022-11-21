@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import styles from '../styles/LandingPage.module.css'
 import Navbar from '../components/Navbar'
-import Top from '../components/Top'
 import Hero from '../components/Hero'
 import Services from '../components/Services'
 import Contact from '../components/Contact'
@@ -18,7 +17,7 @@ export default function Home() {
       <Navbar notFixed />  
       <Hero />
       <Services />
-      <SlidingText text="Fast. Functional. Responsive" speed={-0.1} offset={1800} />
+      {/* <SlidingText text="Fast. Functional. Responsive" speed={-0.1} offset={1800} /> */}
       <PortfolioSlideshow />
       <Contact />
       <Footer />
