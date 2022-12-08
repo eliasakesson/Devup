@@ -20,7 +20,7 @@ export default function Services() {
           </div>
           <div className={styles.text}>
             <h3>Webb Utveckling</h3>
-            <p>Vi utvecklar hemsidor åt dig, allt ifrån enkla ensidiga hemsidor till stora flersidiga hemsidor.</p>
+            <p>Vi utvecklar hemsidor åt dig, allt ifrån enkla ensidiga hemsidor till mer komplicerade hemsidor. Vi använder oss av de senaste teknikerna för att skapa en snabb och responsiv hemsida.</p>
             <Link className='link' href='/services#web'>Läs mer<CgArrowLongRight /></Link>
           </div>
         </div>
@@ -30,7 +30,7 @@ export default function Services() {
           </div>
           <div className={styles.text}>
             <h3>Webb Appar</h3>
-            <p>Vi utvecklar webbapplikationer åt dig, allt ifrån enkla applikationer till komplexa applikationer med databaser och inloggning.</p>
+            <p>Våra webbappar är skapade med funktion och användarvänlighet i åtanke. De senaste teknikerna används för att skapa en snabb och responsiv webbapp.</p>
             <Link className='link' href='/services#app'>Läs mer<CgArrowLongRight /></Link>
           </div>
         </div>
@@ -40,7 +40,7 @@ export default function Services() {
           </div>
           <div className={styles.text}>
             <h3>Mobil Appar</h3>
-            <p>Vi utvecklar mobilapplikationer åt dig, allt ifrån enkla appar till komplexa appar med databaser och inloggning.</p>
+            <p>Vi utvecklar mobilappar som får dig att sticka ut från mängden. De senaste teknikerna används för att skapa en snabb och responsiv mobilapp.</p>
             <Link className='link' href='/services#mobile'>Läs mer<CgArrowLongRight /></Link>
           </div>
         </div>

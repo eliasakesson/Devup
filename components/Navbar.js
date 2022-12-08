@@ -11,6 +11,10 @@ export default function Navbar(props) {
     const [scrollY, setScrollY] = useState(0)
   
     useEffect(() => {
+        if (ref.current !== null){
+            setScrollY(-document.body.getBoundingClientRect().top)
+        }
+
         window.addEventListener('scroll', () => {
             if (ref.current !== null){
                 setScrollY(-document.body.getBoundingClientRect().top)
@@ -27,15 +31,7 @@ export default function Navbar(props) {
   )
 }
 
-function Nav(props){
-
-    // {label: "Services", dropdown: [
-    //     {label: "Web Development", link: "/web"},
-    //     {label: "Mobile App Development", link: "/mobile"},
-    //     {label: "Desktop App Development", link: "/desktop"},
-    //     {label: "Game Development", link: "/game"}
-    // ]},
-
+function Nav(props){ 
     const navItemProps = [
         {label: "Hem", link: "/"},
         {label: "Tjänster", link: "/services"},

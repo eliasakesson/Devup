@@ -10,7 +10,7 @@ export default function Footer() {
       <div className={styles.footer}>
         <div className={styles.footerinfo}>
           <Link style={{textDecoration: "none"}} href="/"><div className={styles.logo}><Image src='/logo.png' alt='' width={1000} height={1000} /><h2>DevUp</h2></div></Link>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris dapibus nibh et urna pharetra iaculis. Curabitur porta nisl est, eu hendrerit urna pulvinar sed. Nullam arcu mi, aliquet et sem id, laoreet efficitur justo.</p>
+          <p>Devup är en webbutvecklingsbyrå som fokuserar på att skapa responsiva och användarvänliga hemsidor, som uppmanar till köp.</p>
         </div>
         <div className={styles.links}>
           <h3>Våra Tjänster</h3>
