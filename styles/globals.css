@@ -28,7 +28,8 @@ body{
   /* Navbar */
   --navbar-bg: #ffffff;
   --navbar-height: 72px;
-  --footer-height: 96px;
+  --footer-bg: rgb(73, 80, 87);
+  --footer-height: 360px;
 }
 
 h1{
