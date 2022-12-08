@@ -117,7 +117,7 @@
 
 @media screen and (max-width: 768px) {
     .container{
-        height: var(--navbar-height);
+        height: var(--navbar-height) !important;
         background-color: white !important;
         border-bottom: 1px solid var(--border) !important;
     }
