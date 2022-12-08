@@ -71,7 +71,7 @@ h1 span, h2 span, h3 span, h4 span, h5 span, p span{
   position: relative;
   max-width: 100%;
   padding: 15vh 10vw;
-  min-height: calc(100vh - var(--footer-height));
+  min-height: calc(100vh - var(--navbar-height));
   overflow: hidden;
 }
 
