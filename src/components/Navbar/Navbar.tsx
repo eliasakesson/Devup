@@ -37,7 +37,7 @@ const Nav = () => {
         {label: "Hem", link: "/"},
         {label: "Prissättning", link: "/pricing"},
         {label: "Portfolio", link: "/portfolio"},
-        {label: "Om oss", link: "/about"},
+        // {label: "Om oss", link: "/about"},
         {label: "Kontakt", link: "/contact"}
     ]
 

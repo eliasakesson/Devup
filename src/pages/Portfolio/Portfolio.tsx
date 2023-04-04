@@ -20,13 +20,6 @@ const Portfolio = () => {
                         <p>Chatterly is a discord clone built with React, Firebase and Electron. It is a desktop messaging app that allows users to create servers, channels, and send messages to one another in real-time.</p>
                     </div>
                 </li>
-                <li className="project">
-                    <img src='/Images/Volted.png' alt='Volted' />
-                    <div className="text">
-                        <h4>Taskeer</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
-                    </div>
-                </li>
             </ul>
         </section>
     );

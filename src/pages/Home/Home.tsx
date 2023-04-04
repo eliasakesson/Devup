@@ -191,7 +191,6 @@ const Portfolio = () => {
             <ul className="projects">
                 <Project image='/Images/Volted.png' />
                 <Project image='/Images/Chatterly.png' />
-                <Project image='/Images/Volted.png' />
             </ul>
         </section>
     );
