@@ -1,0 +1,103 @@
+@import '../../index.scss';
+
+.footer{
+    width: 100%;
+    min-height: $footer-height;
+    background-color: $footer-bg;
+    padding: 4vh 10vw;
+
+    .upper{
+        display: flex;
+        justify-content: space-between;
+        gap: 5vw;
+    
+        .links{
+            display: flex;
+            flex-direction: column;
+            gap: 2vh;
+        }
+        
+        .info{
+            max-width: 50ch;
+
+            .logo{
+                display: flex;
+                align-items: center;
+                gap: 1.5rem;
+                
+                img{
+                    height: 36px;
+                    width: 36px;
+                }
+            }
+        }
+    
+        h2{
+            color: white;
+            font-size: clamp(2rem, 2vw, 2.5rem);
+        }
+        
+        h3{
+            color: white;
+            font-size: clamp(1.25rem, 1.5vw, 1.5rem);
+            font-weight: 600;
+        }
+        
+        h4{
+            color: white;
+            font-size: clamp(0.75rem, 1.5vw, 1rem);
+            font-weight: 600;
+        }
+        
+        p{
+            color: white;
+            font-size: 1rem;
+            margin-top: 2vh;
+        }
+        
+        .email{
+            display: flex;
+            align-items: center;
+            gap: 1.5vh;
+            margin-top: 3vh;
+        
+            .icon{
+                height: 4vh;
+                width: 4vh;
+                border-radius: .5rem;
+                background-color: #4f83fda0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+
+    .separator{
+        height: 1px;
+        width: 100%;
+        background-color: hsl(210, 9%, 51%);
+        margin: 5vh 0 2vh 0;
+    }
+    
+    .copyright{
+        color: white;
+        font-size: clamp(0.5rem, 1vw, 0.75rem);
+        text-align: center;
+    }
+    
+    @media screen and (max-width: 1280px) {
+        padding: 4vh 10vw;
+
+        .upper{
+            flex-direction: column;
+            gap: 5vh;
+        }
+
+        .copyright{
+            text-align: center;
+            margin-bottom: 0;
+        }
+    }
+}
+

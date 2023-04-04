@@ -1,28 +1,26 @@
 {
-  "name": "website-store",
-  "version": "0.1.0",
+  "name": "devup-v2",
   "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "@emailjs/browser": "^3.9.0",
-    "bootstrap": "^5.2.2",
-    "next": "13.0.0",
-    "react": "18.2.0",
-    "react-3d-rotation-box": "^1.0.1",
-    "react-bootstrap": "^2.5.0",
-    "react-dom": "18.2.0",
-    "react-icons": "^4.6.0",
-    "react-is-visible": "^1.2.0",
-    "react-responsive": "^9.0.0",
-    "react-simple-maps": "^3.0.0"
+    "@emailjs/browser": "^3.10.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.8.0",
+    "react-router-dom": "^6.10.0",
+    "sass": "^1.60.0"
   },
   "devDependencies": {
-    "eslint": "8.26.0",
-    "eslint-config-next": "13.0.0"
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "@vitejs/plugin-react": "^3.1.0",
+    "typescript": "^4.9.3",
+    "vite": "^4.2.0"
   }
 }

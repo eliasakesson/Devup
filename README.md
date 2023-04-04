@@ -1,1 +1,0 @@
-This is the official website for the DevUp Web Development Agency.

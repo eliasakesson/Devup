@@ -1,0 +1,138 @@
+@import '../../index.scss';
+
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    
+    width: 100%;
+    height: $navbar-height;
+    padding: 0 5vw;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: $navbar-bg;
+    border-bottom: 1px solid $border;
+    transition: height 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), color 0.1s;
+
+    @media screen and (min-width: 768px) { 
+        &.notfixed{
+            border-bottom: none;
+            background-color: transparent;
+            height: 128px;
+        }
+    }
+
+
+    .logo{
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+
+        img{
+            width: calc($navbar-height / 2);
+            height: calc($navbar-height / 2);
+            object-fit: cover;
+        }
+
+        h2{
+            color: $text-header;
+            font-size: clamp(1rem, 5vw, 1.5rem);
+        }
+    }
+    
+    .nav{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        list-style-type: none;
+        justify-content: flex-end;
+        
+        .navitem{
+            display: flex;
+            align-items: center;
+    
+            a{
+                color: $text;
+                text-decoration: none;
+                border-radius: $radius;
+                padding: 0.25rem 0.75rem;
+                font-weight: 500;
+                display: flex;
+                align-items: center;
+    
+                &:hover{
+                    background-color: $primary-bg;
+                }
+            }
+    
+            &.active a{
+                background-color: $primary-bg;
+                color: $primary;
+            }
+        }
+    }
+
+    .burgerbutton{
+        display: none;
+    }
+    
+    @media screen and (max-width: 768px) {
+        .nav{
+            position: absolute;
+            left: 0;
+            top: $navbar-height;
+            
+            width: 100%;
+            padding: 1rem 2rem;
+            
+            border-bottom: 1px solid $border;
+            background-color: white;
+            
+            flex-direction: column;
+            
+            &:not(.open){
+                display: none;
+            }
+            
+            .navitem a{
+                width: 100%;
+                height: 4rem;
+            }
+        }
+
+        .burgerbutton{
+            all: unset;
+            height: 24px;   
+            width: 24px;
+            display: grid;
+            gap: 6px;
+            padding: 0.5rem;
+            border-radius: $radius;
+    
+            div{
+                width: 100%;
+                height: 3px;
+                background-color: $text;
+                transition: 0.25s;
+            }
+    
+            &.active div{
+                &:nth-child(1){
+                    transform: rotateZ(45deg) translate(7px, 7px);
+                }
+    
+                &:nth-child(2){
+                    transform: rotateY(90deg);
+                }
+    
+                &:nth-child(3){
+                    transform: rotateZ(-45deg) translate(7px, -7px);
+                }
+            }
+        }
+    }
+}

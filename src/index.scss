@@ -1,0 +1,97 @@
+@import "https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap";
+
+// Colors
+$body-bg: #f9f9f9;
+$text-header: #222;
+$text: rgb(73, 80, 87);
+$hover-grey: rgb(243, 244, 245);
+$primary: rgb(34, 139, 230);
+$primary-bg: rgb(231, 245, 255);
+$secondary: rgb(255, 87, 34);
+$secondary-bg: rgb(255, 235, 233);
+$border: rgb(233, 236, 239);
+$radius: 0.5rem;
+$soft-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+$medium-shadow: 0px 15px 15px 0px rgba(0,0,0,0.15);
+$navbar-bg: #ffffff;
+$navbar-height: 72px;
+$footer-bg: rgb(73, 80, 87);
+$footer-height: 360px;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+	scroll-behavior: smooth;
+	scroll-padding-top: 20vh;
+}
+
+body {
+	width: 100%;
+	min-height: calc(100vh - $navbar-height);
+	background-color: $body-bg;
+    padding-top: $navbar-height;
+}
+
+h1 {
+	font-size: clamp(1.5rem, 3vw, 3rem);
+	color: $text-header;
+	
+    span {
+		color: $primary;
+	}
+}
+h2 {
+	font-size: clamp(1rem, 3vw, 1.5rem);
+	color: $primary;
+}
+h3 {
+	font-size: clamp(1rem, 5vw, 2.5rem);
+	color: $text-header;
+}
+h4 {
+	font-size: clamp(1rem, 3vw, 1.75rem);
+	font-weight: 600;
+	color: $text-header;
+}
+h5 {
+	font-size: clamp(1rem, 1.5vw, 1.25rem);
+	font-weight: 600;
+	color: $text;
+}
+p {
+	font-size: clamp(0.8rem, 1vw, 1rem);
+	color: $text;
+	
+    span {
+		color: $primary;
+	}
+}
+a{
+    text-decoration: none;
+    color: $primary;
+    
+    &:hover{
+        text-decoration: underline;
+    }
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+}
+	
+::-webkit-scrollbar-track {
+	background-color: $hover-grey;
+	border-radius: 0 0 10px 10px;
+}
+	
+::-webkit-scrollbar-thumb {
+	background-color: $text;
+	border-radius: 10px;
+	border: 2px solid $hover-grey;
+}
+	
+::-webkit-scrollbar-thumb:hover {
+	background-color: $text-header;
+}
