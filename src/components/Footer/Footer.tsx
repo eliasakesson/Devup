@@ -1,6 +1,7 @@
 import './Footer.scss'
 import { Link } from 'react-router-dom'
 import { MdEmail } from 'react-icons/md'
+import { Anchor, RouterLink } from '../Buttons'
 
 const Footer = () => {
     return (
@@ -13,13 +14,15 @@ const Footer = () => {
                             <h2>DevUp</h2>
                         </div>
                     </Link>
-                    <p>Devup är en webbutvecklingsbyrå som fokuserar på att skapa responsiva och användarvänliga hemsidor, som uppmanar till köp.</p>
+                    <p>Devup är en dedikerad till att leverera skräddarsydda och högkvalitativa webblösningar som möter dina specifika affärsbehov. 
+                        Vårt team bygger responsiva, sökmotoroptimerade och användarvänliga webbplatser som attraherar besökare och genererar affärsmöjligheter.
+                    </p>
                 </div>
                 <div className="links">
-                    <h3>Våra Tjänster</h3>
-                    <Link to='/services#web' className='link'>Webbutveckling</Link>
-                    <Link to='/services#app' className='link'>Webb Appar</Link>
-                    <Link to='/services#mobile' className='link'>Mobil Appar</Link>
+                    <h3>Navigation</h3>
+                    <RouterLink to='/prices' variant='link'>Prissättning</RouterLink>
+                    <RouterLink to='/portfolio' variant='link'>Portfolio</RouterLink>
+                    <RouterLink to='/contact' variant='link'>Kontakt</RouterLink>
                 </div>
                 <div className="contacts">
                     <h3>Kontakta oss</h3>
@@ -29,7 +32,7 @@ const Footer = () => {
                         </div>
                         <div>
                         <h4>Email:</h4>
-                        <a href='mailto:devupwebagency@gmail.com' className='link' >devupwebagency@gmail.com</a>
+                        <Anchor href='mailto:devupwebagency@gmail.com' variant='link' >devupwebagency@gmail.com</Anchor>
                         </div>
                     </div>
                 </div>
