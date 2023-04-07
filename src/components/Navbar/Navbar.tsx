@@ -47,7 +47,7 @@ const Nav = () => {
         <nav>
             <ul className={`nav ${burgerOpen && "open"}`}>
                 {navItemProps.map((item, i) => {
-                    return <NavItem key={i} {...item} />
+                    return <NavItem key={i} {...item} closeBurger={() => setBurgerOpen(false)} />
                 })}
             </ul>
             <button title={burgerOpen ? "Close" : "Open"} className={`burgerbutton ${burgerOpen && "active"}`} onClick={() => setBurgerOpen(!burgerOpen)}><div /><div /><div /></button>
@@ -55,14 +55,12 @@ const Nav = () => {
     )
 }
 
-const NavItem = ({ label, link  } : { label: string, link: string}) => {
+const NavItem = ({ label, link, closeBurger } : { label: string, link: string, closeBurger: () => void}) => {
     const location = useLocation()
 
-    const [dropdownActive, setDropdownActive] = useState(false)
-
     return (
-        <li className={`navitem ${location.pathname == link && "active"}`} onPointerLeave={() => setDropdownActive(false)}>
-            <Link to={link || "/"} onPointerEnter={() => setDropdownActive(true)} onTouchStart={() => setDropdownActive(!dropdownActive)}>
+        <li className={`navitem ${location.pathname == link && "active"}`}>
+            <Link to={link} onClick={closeBurger}>
                 {label}
             </Link>
         </li>
