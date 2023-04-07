@@ -9,7 +9,7 @@ const Pricing = () => {
             <table>
                 <thead>
                     <tr>
-                        <th>Tjänst</th>
+                        <th></th>
                         <th>Basic</th>
                         <th>Standard</th>
                         <th>Premium</th>
@@ -17,8 +17,9 @@ const Pricing = () => {
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Webbdesign</td>
+                        <td><h3>Webbdesign</h3></td>
                         <td>
+                            <h4>Basic</h4>
                             <ul>
                                 <li>En anpassad hemsida</li>
                                 <li>Upp till 3 ytterligare sidor</li>
@@ -27,6 +28,7 @@ const Pricing = () => {
                             <span>1500-2500</span>
                         </td>
                         <td>
+                            <h4>Standard</h4>
                             <ul>
                                 <li>En anpassad hemsida</li>
                                 <li>Upp till 5 ytterligare sidor</li>
@@ -35,6 +37,7 @@ const Pricing = () => {
                             <span>2500-7500</span>
                         </td>
                         <td>
+                            <h4>Premium</h4>
                             <ul>
                                 <li>En anpassad hemsida</li>
                                 <li>Upp till 10 sidor</li>
@@ -44,8 +47,9 @@ const Pricing = () => {
                         </td>
                     </tr>
                     <tr>
-                        <td>Webbutveckling</td>
+                        <td><h3>Webbutveckling</h3></td>
                         <td>
+                            <h4>Basic</h4>
                             <ul>
                                 <li>Grundläggande webbapplikation</li>
                                 <li>Begränsad funktionalitet och funktioner</li>
@@ -53,6 +57,7 @@ const Pricing = () => {
                             <span>2500-7500</span>
                         </td>
                         <td>
+                            <h4>Standard</h4>
                             <ul>
                                 <li>Komplex webbapplikation</li>
                                 <li>Funktioner som användarautentisering och integration med databaser</li>
@@ -60,6 +65,7 @@ const Pricing = () => {
                             <span>7500-15000</span>
                         </td>
                         <td>
+                            <h4>Premium</h4>
                             <ul>
                                 <li>Utveckling av en högst komplex webbapplikation</li>
                                 <li>Avancerade funktioner som realtidsdataprocessering och integration med tredjeparts-API:er</li>
@@ -68,8 +74,9 @@ const Pricing = () => {
                         </td>
                     </tr>
                     <tr>
-                        <td>Apputveckling</td>
+                        <td><h3>Apputveckling</h3></td>
                         <td>
+                            <h4>Basic</h4>
                             <ul>
                                 <li>Grundläggande app</li>
                                 <li>Begränsad funktionalitet och funktioner</li>
@@ -77,6 +84,7 @@ const Pricing = () => {
                             <span>2500-7500</span>
                         </td>
                         <td>
+                            <h4>Standard</h4>
                             <ul>
                                 <li>Komplex app</li>
                                 <li>Funktioner som användarautentisering och push-notifikationer</li>
@@ -84,6 +92,7 @@ const Pricing = () => {
                             <span>7500-15000</span>
                         </td>
                         <td>
+                            <h4>Premium</h4>
                             <ul>
                                 <li>Utveckling av en högst komplex app</li>
                                 <li>Avancerade funktioner som realtidsdataprocessering och integration med tredjeparts-API:er</li>

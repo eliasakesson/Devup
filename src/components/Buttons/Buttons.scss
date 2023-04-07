@@ -4,7 +4,7 @@
     &.primary{
         background-color: $primary-bg;
         color: $primary;
-        padding: 1vh 3vw;
+        padding: 1rem 5rem;
         border-radius: 1vh;
         border: none;
         
@@ -16,6 +16,23 @@
         &:hover {
             background-color: $primary;
             color: $primary-bg;
+        }
+    }
+
+    &.link{
+        background-color: transparent;
+        color: $primary;
+        padding: .25rem 1rem;
+        border: none;
+        
+        font-size: 1rem;
+        font-weight: 600;
+        text-decoration: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+            text-decoration: underline;
         }
     }
 

@@ -2,8 +2,9 @@
 
 .contact-screen{
     display: flex;
-    gap: 2rem;
-    padding: 20vh 20vw;
+    flex-wrap: wrap;
+    gap: 4rem;
+    padding: 10vh 10vw;
     min-height: calc(100vh - $navbar-height);
 
     .text{
@@ -11,6 +12,7 @@
         flex-direction: column;
         gap: 1rem;
         flex: 1;
+        min-width: 400px;
 
         .email{
             margin-top: 2rem;
@@ -22,6 +24,7 @@
         flex-direction: column;
         gap: 1rem;
         flex: 1;
+        min-width: 400px;
 
         .input-group{
             position: relative;

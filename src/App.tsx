@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import { Home, About, Contact, Loading, Portfolio, Pricing } from "./pages";
+import { Home, About, Contact, Loading, Portfolio, Pricing, Error404 } from "./pages";
 import { Navbar, Footer } from "./components";
+import { ScrollToTopOnRouteChange } from "./hooks";
 
 const App = () => {
 
@@ -18,6 +19,7 @@ const App = () => {
     <>
       {loading && <Loading />}
       <BrowserRouter>
+        <ScrollToTopOnRouteChange />
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -25,6 +27,7 @@ const App = () => {
           <Route path="/contact" element={<Contact />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/pricing" element={<Pricing />} />
+          <Route path="*" element={<Error404 />} />
         </Routes>
         <Footer />
       </BrowserRouter>

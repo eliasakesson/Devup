@@ -90,12 +90,14 @@ const Services = () => {
                 </li>
             </ul>
             <div className="cardsref" ref={topRef}></div>
-            <ul className={`cards  ${(topVisible || bottomVisible) ? "visible" : ""}`} style={{transform: `translateX(-${serviceIndex * 75}vmin)`}}>
+            <ul className={`cards  ${(topVisible || bottomVisible) ? "visible" : ""}`} style={{transform: `translateX(-${serviceIndex * 85}vmin)`}}>
                 <li className='card' style={{transitionDelay: "0.25s"}}>
-                    <div className="icon">
-                        <MdDesignServices />
+                    <div className="top">
+                        <div className="icon">
+                            <MdDesignServices />
+                        </div>
+                        <h4>Webbdesign</h4>
                     </div>
-                    <h4>Webbdesign</h4>
                     <p>Vi skapar anpassade webbplatser som är intuitiva och lättanvända, vilket leder till en förbättrad användarupplevelse. Våra webbplatser är också responsiva och optimerade för alla enheter och plattformar, vilket säkerställer att dina kunder alltid kan hitta det de söker.</p>
                     <ul>
                         <li>Koncept</li>
@@ -111,10 +113,12 @@ const Services = () => {
                     </ul>
                 </li>
                 <li className='card' style={{transitionDelay: "0.5s"}}>
-                    <div className="icon">
-                        <MdCode />
+                    <div className="top">
+                        <div className="icon">
+                            <MdCode />
+                        </div>
+                        <h4>Webbutveckling</h4>
                     </div>
-                    <h4>Webbutveckling</h4>
                     <p>Vi utvecklar kraftfulla webbapplikationer som möter dina unika behov. Vårt team av erfarna utvecklare kan skapa allt från enkla webbplatser till avancerade e-handelsplattformar, med fokus på prestanda och skalbarhet.</p>
                     <ul>
                         <li>Frontend</li>
@@ -128,10 +132,12 @@ const Services = () => {
                     </ul>
                 </li>
                 <li className='card' style={{transitionDelay: "0.75s"}}>
-                    <div className="icon">
-                        <MdDeveloperMode />
+                    <div className="top">
+                        <div className="icon">
+                            <MdDeveloperMode />
+                        </div>
+                        <h4>Apputveckling</h4>
                     </div>
-                    <h4>Apputveckling</h4>
                     <p>Vi skapar anpassade mobilapplikationer för både Android och iOS-enheter. Vårt team av apputvecklare kan skapa allt från enkla appar till mer komplexa plattformar med realtidsdataprocessering och integration med tredjeparts-API:er.</p>
                     <ul>
                         <li>Frontend</li>
