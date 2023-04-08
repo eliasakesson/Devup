@@ -24,9 +24,9 @@ const Contact = () => {
 
     return (
         <section className='contact-screen'>
-            <div  className='text'>
-                <h2>Kontakta oss</h2>
-                <h3>Har du en projekt<br /> i åtanke?</h3>
+            <div className='text'>
+                <h1>Kontakta oss</h1>
+                <h2>Har du en projekt<br /> i åtanke?</h2>
                 <div className="email">
                     <div className="icon"></div>
                     <h4>E-post</h4>
@@ -34,7 +34,7 @@ const Contact = () => {
                 </div>
             </div>
             <form ref={formRef} className='form' onSubmit={handleSubmit}>
-                <h4>Skicka ett mejl</h4>
+                <h3>Skicka ett mejl</h3>
                 <div className="input-group">
                     <input type="text" name="name" id="name" placeholder=' ' required />
                     <label htmlFor="name">Namn</label>

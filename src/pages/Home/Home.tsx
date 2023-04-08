@@ -43,17 +43,26 @@ const Help = () => {
 
 const Services = () => {
 
-    const topRef = useRef(null)
-    const bottomRef = useRef(null)
-    const topVisible = IsVisible(topRef);
-    const bottomVisible = IsVisible(bottomRef);
+    const cardsRef = useRef<HTMLUListElement>(null)
+    const cardsVisible = IsVisible(cardsRef);
 
     const [serviceIndex, setServiceIndex] = useState(0);
 
+    useEffect(() => {
+        if (cardsRef.current === null || cardsRef.current.children?.length === 0) return;
+        
+        cardsRef.current.scrollTo({
+            left: cardsRef.current.children[0].clientWidth * serviceIndex,
+            behavior: 'smooth'
+        });
+    }, [serviceIndex]);
+
     return (
         <section className='services' id='services'>
-            <h2>Våra tjänster</h2>
-            <h3>Spara tid inom ditt företag genom att<br /> utnyttja våra tjänster</h3>
+            <div className="text">
+                <h2>Våra tjänster</h2>
+                <h3>Effektivisera ert företag<br /> genom våra tjänster</h3>
+            </div>
             <ul className="options">
                 <li className='option'><Button variant='choice' className={serviceIndex === 0 ? "active" : ""} onClick={() => setServiceIndex(0)}>Webbdesign</Button></li>
                 <li className='option'><Button variant='choice' className={serviceIndex === 1 ? "active" : ""} onClick={() => setServiceIndex(1)}>Webbutveckling</Button></li>
@@ -63,8 +72,7 @@ const Services = () => {
                     <button aria-label='Nästa tjänst' disabled={serviceIndex >= 2} onClick={() => setServiceIndex(index => index + 1)}><MdChevronRight /></button>
                 </li>
             </ul>
-            <div className="cardsref" ref={topRef}></div>
-            <ul className={`cards  ${(topVisible || bottomVisible) ? "visible" : ""}`} style={{transform: `translateX(-${serviceIndex * 85}vmin)`}}>
+            <ul ref={cardsRef ? cardsRef : null} className={`cards ${cardsVisible ? "visible" : ""}`}>
                 <li className='card' style={{transitionDelay: "0.25s"}}>
                     <div className="top">
                         <div className="icon">
@@ -122,7 +130,6 @@ const Services = () => {
                     </ul>
                 </li>
             </ul>
-            <div className="cardsref" ref={bottomRef}></div>
         </section>
     );
 };
