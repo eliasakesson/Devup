@@ -30,7 +30,7 @@ const Contact = () => {
                 <div className="email">
                     <div className="icon"></div>
                     <h4>E-post</h4>
-                    <Anchor variant='link' href='mailto:devupwebagency@gmail.com'>devupwebagency@gmail.com</Anchor>
+                    <Anchor variant='link' href='mailto:elias@devup.se'>elias@devup.se</Anchor>
                 </div>
             </div>
             <form ref={formRef} className='form' onSubmit={handleSubmit}>

@@ -32,7 +32,7 @@ const Footer = () => {
                         </div>
                         <div>
                         <h4>Email:</h4>
-                        <Anchor href='mailto:devupwebagency@gmail.com' variant='link' >devupwebagency@gmail.com</Anchor>
+                        <Anchor href='mailto:elias@devup.se' variant='link' >elias@devup.se</Anchor>
                         </div>
                     </div>
                 </div>
