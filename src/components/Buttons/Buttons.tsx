@@ -1,5 +1,6 @@
 import './Buttons.scss'
 import { Link } from 'react-router-dom';
+import { BsArrowRight } from 'react-icons/bs';
 
 const Button = ({ children, variant, onClick, className, style } : ButtonProps) => {
     return (
@@ -7,9 +8,9 @@ const Button = ({ children, variant, onClick, className, style } : ButtonProps) 
     );
 };
 
-const RouterLink = ({ children, variant, to, className, style } : RouterLinkProps) => {
+const RouterLink = ({ children, variant, to, className, style, arrow } : RouterLinkProps) => {
     return (
-        <Link to={to} className={`button-component ${variant} ${className}`} style={style}>{children}</Link>
+        <Link to={to} className={`button-component ${variant} ${className}`} style={style}>{children}{arrow && <BsArrowRight />}</Link>
     );
 };
 
@@ -29,10 +30,11 @@ interface ButtonProps {
 
 interface RouterLinkProps {
     children: React.ReactNode,
-    variant: 'primary' | 'secondary' | 'link',
+    variant: 'primary' | 'secondary' | 'link' | 'white',
     className?: string,
     to: string,
     style?: React.CSSProperties,
+    arrow?: boolean,
 }
 
 interface AnchorProps {

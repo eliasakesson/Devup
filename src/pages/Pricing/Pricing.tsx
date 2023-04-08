@@ -5,7 +5,7 @@ const Pricing = () => {
         <div className='pricing-screen'>
             <h1>Prissättning</h1>
             <h2>Våra prispaket</h2>
-            <p>Priserna nedan är ungefärliga. Jag jobbar för <span>120 kr/h</span> och priserna nedan är en <span>uppskattning</span> på priset baserat på antal arbetstimmar som projektet tar.</p>
+            <p>Priserna nedan är <span>ungefärliga</span> och varierar beroende på <span>storlek</span> och <span>tid</span> som projektet tar.</p>
             <table>
                 <thead>
                     <tr>

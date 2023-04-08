@@ -9,10 +9,11 @@ const Home = () => {
     return (
         <div className="home-screen">
             <Hero />
+            <Help />
             <Services />
             <WhyUs />
-            <Testimony />
             <Portfolio />
+            <Testimony />
             <Pricing />
             <Contact />
         </div>
@@ -23,47 +24,20 @@ const Hero = () => {
     return (
         <section className='hero'>
             <h1>Upptäck den nya<br /> generationen inom<br /> <span>webbutveckling</span></h1>
-            <RouterLink variant='primary' to='/pricing' className='pulsating'>Se priser</RouterLink>
+            <RouterLink variant='primary' to='/contact' className='pulsating'>Kontakta oss</RouterLink>
         </section>
     );
 };
 
-const ScrollPortfolio = () => {
-
-    const ref = useRef(null)
-    const [scrollY, setScrollY] = useState(0)
-  
-    useEffect(() => {
-        if (ref.current !== null){
-            setScrollY(-document.body.getBoundingClientRect().top)
-        }
-
-        window.addEventListener('scroll', () => {
-            if (ref.current !== null){
-                setScrollY(-document.body.getBoundingClientRect().top)
-            }
-        })
-    }
-    , [])
-
+const Help = () => {
     return (
-        <div className="scrollportfolio" ref={ref}>
-            <h2>Senaste Projekten</h2>
-            <div className="projects" style={{transform: `translateX(${(scrollY * 0.3) - 200}px)`}}>
-                <div className="project">
-                    <img src='/Images/Volted.png' alt='' />
-                </div>
-                <div className="project">
-                    <img src='/Images/Volted.png' alt='' />
-                </div>
-                <div className="project">
-                    <img src='/Images/Volted.png' alt='' />
-                </div>
-                <div className="project">
-                    <img src='/Images/Volted.png' alt='' />
-                </div>
+        <section className='help'>
+            <h2>Devup hjälper små & medelstora företag med sin digitala närvaro</h2>
+            <div className="right">
+                <p>Vi erbjuder skräddarsydda digitala lösningar som hjälper företag att förbättra sin digitala närvaro och öka sin synlighet online, vilket kan locka fler kunder och stärka företagens konkurrenskraft i den digitala världen.</p>
+                <RouterLink variant='link' to='/contact' arrow>Läs mer om oss</RouterLink>
             </div>
-        </div>
+        </section>
     );
 };
 
@@ -175,6 +149,10 @@ const WhyUs = () => {
                     <p>Våra webbplatser är optimerade för sökmotorer, vilket gör att ditt innehåll kan nå fler kunder.</p>
                 </div>
             </div>
+            <div className="next-step">
+                <h3>Redo att ta nästa steg?</h3>
+                <RouterLink to='/contact' variant='white'>Kontakta oss</RouterLink>
+            </div>
         </section>
     );
 };
@@ -219,7 +197,6 @@ const Pricing = () => {
         <section className='pricing' id='pricing'>
             <h2>Priser</h2>
             <h3>Våra populäraste paket</h3>
-            <p>Priserna nedan är ungefärliga. Jag jobbar för <span>120 kr/h</span> och priserna nedan är en <span>uppskattning</span> på priset baserat på antal arbetstimmar som projektet tar.</p>
             <ul className="cards">
                 <li className='card'>
                     <h4>Standard Webbdesign</h4>
@@ -247,7 +224,8 @@ const Pricing = () => {
                     <span>7500-15000</span>
                 </li>
             </ul>
-            <RouterLink variant='link' to='/pricing'>Se alla paket</RouterLink>
+            <p>Priserna är <span>ungefärliga</span> och varierar beroende på projektet.</p>
+            <RouterLink variant='link' to='/pricing' arrow>Se alla paket</RouterLink>
         </section>
     );
 }

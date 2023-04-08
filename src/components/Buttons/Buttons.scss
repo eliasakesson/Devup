@@ -19,7 +19,46 @@
         }
     }
 
+    &.secondary{
+        background-color: $secondary-bg;
+        color: $secondary;
+        padding: 1rem 5rem;
+        border-radius: 1vh;
+        border: none;
+        
+        font-weight: 600;
+        text-decoration: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background-color: $secondary;
+            color: $secondary-bg;
+        }
+    }
+
+    &.white{
+        background-color: white;
+        color: $text;
+        padding: 1rem 5rem;
+        border-radius: 1vh;
+        border: none;
+        
+        font-weight: 600;
+        text-decoration: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background-color: $text;
+            color: white;
+        }
+    }
+
     &.link{
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
         background-color: transparent;
         color: $primary;
         border: none;
