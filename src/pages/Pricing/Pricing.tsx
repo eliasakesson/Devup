@@ -1,3 +1,4 @@
+import { RouterLink } from '../../components'
 import './Pricing.scss'
 
 const Pricing = () => {
@@ -5,7 +6,8 @@ const Pricing = () => {
         <div className='pricing-screen'>
             <h1>Prissättning</h1>
             <h2>Våra prispaket</h2>
-            <p>Priserna nedan är <span>ungefärliga</span> och varierar beroende på <span>storlek</span> och <span>tid</span> som projektet tar.</p>
+            <p>Priserna nedan är ungefärliga och varierar beroende på storlek och tid som projektet tar.</p>
+            <p>För en bättre uppskattning på pris, <RouterLink to='/contact' variant='link' arrow>Kontakta Oss</RouterLink></p>
             <table>
                 <thead>
                     <tr>

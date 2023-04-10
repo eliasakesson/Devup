@@ -35,7 +35,7 @@ const Help = () => {
             <h2>Devup hjälper små & medelstora företag med sin digitala närvaro</h2>
             <div className="right">
                 <p>Vi erbjuder skräddarsydda digitala lösningar som hjälper företag att förbättra sin digitala närvaro och öka sin synlighet online, vilket kan locka fler kunder och stärka företagens konkurrenskraft i den digitala världen.</p>
-                <RouterLink variant='link' to='/contact' arrow>Läs mer om oss</RouterLink>
+                <RouterLink variant='link' to='/about' arrow>Läs mer om oss</RouterLink>
             </div>
         </section>
     );
@@ -73,7 +73,7 @@ const Services = () => {
                 </li>
             </ul>
             <ul ref={cardsRef ? cardsRef : null} className={`cards ${cardsVisible ? "visible" : ""}`}>
-                <li className='card' style={{transitionDelay: "0.25s"}}>
+                <li className='card'>
                     <div className="top">
                         <div className="icon">
                             <MdDesignServices />
@@ -94,7 +94,7 @@ const Services = () => {
                         <li>SEO</li>
                     </ul>
                 </li>
-                <li className='card' style={{transitionDelay: "0.5s"}}>
+                <li className='card' style={{transitionDelay: "0.2s"}}>
                     <div className="top">
                         <div className="icon">
                             <MdCode />
@@ -113,7 +113,7 @@ const Services = () => {
                         <li>SEO</li>
                     </ul>
                 </li>
-                <li className='card' style={{transitionDelay: "0.75s"}}>
+                <li className='card' style={{transitionDelay: "0.4s"}}>
                     <div className="top">
                         <div className="icon">
                             <MdDeveloperMode />

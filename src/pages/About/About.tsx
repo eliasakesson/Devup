@@ -53,12 +53,7 @@ const About = () => {
                     <h3>Om oss</h3>
                     <p>Vi är en webbutvecklingsbyrå som ligger i Värnamo, Sverige.</p>
                     <p>Vår passion är att skapa hemsidor som är användarvänliga,<br /> och som uppmanar till köp.</p>
-                    <div className='quote'>
-                        <span>“</span>
-                        <p>We don't just build websites,<br /> we build websites that SELLS</p>
-                        <span>”</span>
-                    </div>
-                    <RouterLink variant='primary' to="/contact">Kontakta Oss</RouterLink>
+                    <RouterLink variant='link' to="/contact" arrow>Kontakta Oss</RouterLink>
                 </div>
             </div>
         </div>
