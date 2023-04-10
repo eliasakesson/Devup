@@ -31,6 +31,8 @@ body {
 	min-height: calc(100vh - $navbar-height);
 	background-color: $body-bg;
     padding-top: $navbar-height;
+	max-width: 100%;
+  	overflow-x: hidden;
 }
 
 h1 {
