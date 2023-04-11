@@ -17,6 +17,15 @@ const Portfolio = () => {
                             <p>Mobilapplikation</p>
                         </div>
                     </li>
+                    <li className="project">
+                        <div className="image">
+                            <img src='/Images/Workflow.png' alt='Volted' />
+                        </div>
+                        <div className="text">
+                            <h4>Workflow</h4>
+                            <p>Webbapplikation</p>
+                        </div>
+                    </li>
                 </ul>
             </section>
         </AnimatedPage>
