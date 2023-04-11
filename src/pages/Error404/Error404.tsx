@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Button, RouterLink } from '../../components'
+import { AnimatedPage, Button, RouterLink } from '../../components'
 import './Error404.scss'
 import { useNavigate } from 'react-router-dom'
 
@@ -24,18 +24,20 @@ const Error404 = () => {
     }, [timer])
 
     return (
-        <div className='error404'>
-            <span>404 Error</span>
-            <h1>Vi saknar denna sida</h1>
-            <p>Tyvärr, sidan du letar efter finns inte eller har flyttats</p>
-            <div className="gohome">
-                <RouterLink to='/' variant='primary' className='pulsating'>Gå hem</RouterLink>
-                {isTimerActive && <>
-                    <p>eller</p>
-                    <p>Gå automatiskt hem om {timer} sekunder<Button variant='link' onClick={() => setIsTimerActive(false)}>Avbryt</Button></p>
-                </>}
+        <AnimatedPage>
+            <div className='error404'>
+                <span>404 Error</span>
+                <h1>Vi saknar denna sida</h1>
+                <p>Tyvärr, sidan du letar efter finns inte eller har flyttats</p>
+                <div className="gohome">
+                    <RouterLink to='/' variant='primary' className='pulsating'>Gå hem</RouterLink>
+                    {isTimerActive && <>
+                        <p>eller</p>
+                        <p>Gå automatiskt hem om {timer} sekunder<Button variant='link' onClick={() => setIsTimerActive(false)}>Avbryt</Button></p>
+                    </>}
+                </div>
             </div>
-        </div>
+        </AnimatedPage>
     )
 }
 

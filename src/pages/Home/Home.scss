@@ -215,6 +215,12 @@
                         }
                     }
                 }
+
+                > *{
+                    transition-delay: .25s !important;
+                    transition: .5s;
+                    opacity: 1;
+                }
             }
 
             &:not(.visible) .card{
@@ -222,6 +228,10 @@
                 opacity: 0;
                 transition: 0s !important;
                 transition-delay: 0s !important;
+
+                > *{
+                    opacity: 0;
+                }
             }
 
             &::-webkit-scrollbar{
@@ -340,14 +350,14 @@
 
         .projects{
             display: grid;
-            grid-template-columns: repeat(2, minmax(300px, 25vw));
+            grid-template-columns: repeat(2, minmax(300px, 35vw));
             gap: 2rem;
             margin-top: 5vh;
-            padding-bottom: 6rem;
+            padding-bottom: 10rem;
 
             .project{
                 width: 100%;
-                aspect-ratio: 1;
+                aspect-ratio: 16 / 9;
                 display: flex;
                 flex-direction: column;
                 gap: 2rem;

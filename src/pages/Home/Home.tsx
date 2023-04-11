@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { Anchor, Button, RouterLink } from '../../components';
+import { Anchor, AnimatedPage, Button, RouterLink } from '../../components';
 import './Home.scss';
 import { MdDesignServices, MdCode, MdDeveloperMode, MdChevronRight, MdChevronLeft } from 'react-icons/md';
 import { RiDoubleQuotesL } from 'react-icons/ri';
@@ -7,16 +7,18 @@ import { IsVisible } from '../../hooks';
 
 const Home = () => {
     return (
-        <div className="home-screen">
-            <Hero />
-            <Help />
-            <Services />
-            <WhyUs />
-            <Portfolio />
-            <Testimony />
-            <Pricing />
-            <Contact />
-        </div>
+        <AnimatedPage>
+            <div className="home-screen">
+                <Hero />
+                <Help />
+                <Services />
+                <WhyUs />
+                <Portfolio />
+                <Testimony />
+                <Pricing />
+                <Contact />
+            </div>
+        </AnimatedPage>
     );
 };
 
@@ -181,8 +183,9 @@ const Portfolio = () => {
             <h3>Se några av våra senaste projekt</h3>
             <ul className="projects">
                 <Project image='/Images/Volted.png' />
-                <Project image='/Images/Chatterly.png' />
+                <Project image='/Images/Workflow.png' />
             </ul>
+            <RouterLink to='/portfolio' variant='link' arrow>Se fler projekt</RouterLink>
         </section>
     );
 };
