@@ -13,9 +13,9 @@ const Home = () => {
                 <Help />
                 <Services />
                 <WhyUs />
-                {/* <Portfolio />
+                <Portfolio />
                 <Testimony />
-                <Pricing />
+                {/* <Pricing />
                 <Contact /> */}
             </div>
         </AnimatedPage>
