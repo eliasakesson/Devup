@@ -17,7 +17,7 @@ const App = () => {
 
   return (
     <>
-      {loading && <Loading />}
+      {/* {loading && <Loading />} */}
       <BrowserRouter>
         <ScrollToTopOnRouteChange />
         <Navbar />
