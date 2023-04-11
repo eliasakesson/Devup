@@ -9,9 +9,9 @@ const Home = () => {
     return (
         <AnimatedPage>
             <div className="home-screen">
-                {/* <Hero />
-                <Help /> */}
-                <Services />
+                <Hero />
+                <Help />
+                {/* <Services /> */}
                 <WhyUs />
                 <Portfolio />
                 <Testimony />
