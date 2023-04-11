@@ -41,7 +41,7 @@
     &.white{
         background-color: white;
         color: $text;
-        padding: 1rem 5rem;
+        padding: 1rem calc(1rem + 3vw);
         border-radius: 1vh;
         border: none;
         

@@ -247,6 +247,7 @@
         gap: 5vh;
         background-color: $primary-bg;
         padding: 10vh 10vw;
+        overflow: hidden;
 
         > h2{
             text-align: center;
@@ -302,6 +303,7 @@
             h3{
                 color: $text-header;
                 font-size: clamp(1.5rem, 3vw, 2rem);
+                text-align: center;
             }
         }
     }
