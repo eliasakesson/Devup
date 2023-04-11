@@ -9,14 +9,14 @@ const Home = () => {
     return (
         <AnimatedPage>
             <div className="home-screen">
-                <Hero />
+                {/* <Hero />
                 <Help />
-                {/* <Services /> */}
+                <Services />
                 <WhyUs />
                 <Portfolio />
                 <Testimony />
                 <Pricing />
-                <Contact />
+                <Contact /> */}
             </div>
         </AnimatedPage>
     );
