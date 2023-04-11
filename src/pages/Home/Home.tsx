@@ -13,10 +13,10 @@ const Home = () => {
                 <Help />
                 <Services />
                 <WhyUs />
-                <Portfolio />
-                {/* <Testimony /> */}
-                {/* <Pricing />
-                <Contact /> */}
+                {/* <Portfolio /> */}
+                <Testimony />
+                <Pricing />
+                <Contact />
             </div>
         </AnimatedPage>
     );
