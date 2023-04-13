@@ -9,16 +9,55 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 2rem;
+        gap: 4rem;
         text-align: center;
-        margin: 25vh 10vw 20vh 10vw;
+        padding: 20vh 10vw 0 10vw;
+        min-height: calc(100vh - $navbar-height);
+        overflow: hidden;
 
         h1{
             font-size: clamp(2rem, 4vw, 4rem);
             color: $text-header;
             
-            span {
+            div:last-child {
                 color: $primary;
+            }
+        }
+
+        p{
+            font-size: clamp(1rem, 2vw, 1.5rem);
+            color: $text;
+            max-width: 50ch;
+        }
+
+        .mouse-follow{
+            position: absolute;
+            width: 25vw;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transform-origin: top left;  
+            top: 20%;
+            left: 70%;
+            z-index: -1;
+            background: linear-gradient(
+                to right,
+                aquamarine,
+                mediumpurple
+            );
+            animation: rotate 20s linear infinite;
+            filter: blur(250px);
+        }
+    
+        @keyframes rotate{
+            from {
+                rotate: 0deg;
+            }
+            50% {
+                scale: 1 1.5;
+            }
+            to {
+                rotate: 360deg;
             }
         }
     }
@@ -150,7 +189,6 @@
                 border: 1px solid $border;
                 box-shadow: $soft-shadow;
                 
-                transition: transform .5s ease-in-out;
                 transform-origin: left;
                 white-space: normal;
 
@@ -214,23 +252,6 @@
                             margin-right: 1vw;
                         }
                     }
-                }
-
-                > *{
-                    transition-delay: .25s !important;
-                    transition: .5s;
-                    opacity: 1;
-                }
-            }
-
-            &:not(.visible) .card{
-                transform: scaleX(0);
-                opacity: 0;
-                transition: 0s !important;
-                transition-delay: 0s !important;
-
-                > *{
-                    opacity: 0;
                 }
             }
 
@@ -355,7 +376,7 @@
             grid-template-columns: repeat(2, minmax(300px, 1fr));
             gap: 2rem;
             margin-top: 5vh;
-            padding-bottom: 10rem;
+            padding-bottom: 8rem;
 
             .project{
                 width: 100%;
@@ -363,12 +384,6 @@
                 display: flex;
                 flex-direction: column;
                 gap: 2rem;
-                transition: 0.5s ease-out;
-
-                &:nth-child(even){
-                    transform: translateY(6rem);
-                    transition-delay: 0.1s;
-                }
 
                 img{
                     width: 100%;
@@ -377,27 +392,17 @@
                     border: 1px solid $border;
                     box-shadow: $soft-shadow;
                     border-radius: $radius;
-                    transition: 0.5s ease-in-out;
                 }
 
-                &:not(.visible){
-                    transform: translateY(10%);
-                    opacity: 0;
-
-                    &:nth-child(even){
-                        transform: translateY(calc(10% + 6rem));
+                &:nth-child(even){
+                    img {
+                        transform: translateY(4rem);
                     }
                 }
             }
 
             @media screen and (max-width: 1200px){
                 grid-template-columns: repeat(1, minmax(300px, 1fr));
-
-                .project.visible{
-                    &:nth-child(even){
-                        transform: translateY(0);
-                    }
-                }
             }
         }
     }
@@ -426,7 +431,9 @@
             
             .card{
                 border: 1px solid $border;
-                padding: 1rem;
+                background-color: white;
+                border-radius: $radius;
+                padding: 2rem;
                 display: flex;
                 flex-direction: column;
                 gap: 2rem;
@@ -475,7 +482,7 @@
         text-align: center;
         margin-bottom: 16vh;
 
-        a{
+        > div{
             margin-top: 4vh;
         }
     }

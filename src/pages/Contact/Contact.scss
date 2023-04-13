@@ -28,6 +28,24 @@
 
         .email{
             margin-top: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            .icon{
+                width: 3rem;
+                height: 3rem;
+                background-color: $primary;
+                display: grid;
+                place-items: center;
+                border-radius: $radius;
+
+                svg{
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    fill: white;
+                }
+            }
         }
     }
 

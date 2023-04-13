@@ -7,6 +7,8 @@ import {
     ZoomableGroup,
     Marker
 } from "react-simple-maps"
+import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 
 const About = () => {
 
@@ -14,11 +16,15 @@ const About = () => {
 
     return (
         <AnimatedPage>
+            <Helmet>
+                <title>Om oss - Vi är DevUp</title>
+                <meta name="description" content="Vi är DevUp. Vi är ett företag som erbjuder tjänster inom webbdesign, webbutveckling och mobilapplikationer." />
+            </Helmet>
             <div className='about-screen'>
                 <h1>Om oss</h1>
-                <h2>Vi är DevUp</h2>
+                <motion.h2 initial={{opacity: 0, translateX: "-100%"}} animate={{opacity: 1, translateX: 0}}>Vi är DevUp</motion.h2>
                 <div className="wrapper">
-                    <div className="map">
+                    <motion.div initial={{opacity: 0, translateX: "-100%"}} animate={{opacity: 1, translateX: 0}} transition={{delay: 0.2}} className="map">
                         <ComposableMap projection="geoMercator">
                             <ZoomableGroup center={[14.5, 57]} zoom={10} maxZoom={15} minZoom={5}>
                                 <Geographies className="countries" geography={geoUrl}>
@@ -49,12 +55,14 @@ const About = () => {
                                 </Marker>
                             </ZoomableGroup>
                         </ComposableMap>
-                    </div>
+                    </motion.div>
                     <div className="text">
-                        <h3>Om oss</h3>
-                        <p>Vi är en webbutvecklingsbyrå som ligger i Värnamo, Sverige.</p>
-                        <p>Vår passion är att skapa hemsidor som är användarvänliga,<br /> och som uppmanar till köp.</p>
-                        <RouterLink variant='link' to="/contact" arrow>Kontakta Oss</RouterLink>
+                        <motion.h3 initial={{opacity: 0, translateY: "100%"}} animate={{opacity: 1, translateY: 0}} transition={{delay: 0.6}}>Om oss</motion.h3>
+                        <motion.p initial={{opacity: 0, translateY: "100%"}} animate={{opacity: 1, translateY: 0}} transition={{delay: 0.8}}>Vi är en webbutvecklingsbyrå som ligger i Värnamo, Sverige.</motion.p>
+                        <motion.p initial={{opacity: 0, translateY: "100%"}} animate={{opacity: 1, translateY: 0}} transition={{delay: 1}}>Vår passion är att skapa hemsidor som är användarvänliga,<br /> och som uppmanar till köp.</motion.p>
+                        <motion.div initial={{opacity: 0, translateY: "100%"}} animate={{opacity: 1, translateY: 0}} transition={{delay: 1.2}}>
+                            <RouterLink variant='link' to="/contact" arrow>Kontakta Oss</RouterLink>
+                        </motion.div>
                     </div>
                 </div>
             </div>

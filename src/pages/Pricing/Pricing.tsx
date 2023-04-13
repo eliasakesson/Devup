@@ -1,15 +1,21 @@
+import { Helmet } from 'react-helmet-async'
 import { AnimatedPage, RouterLink } from '../../components'
 import './Pricing.scss'
+import { motion } from 'framer-motion'
 
 const Pricing = () => {
     return (
         <AnimatedPage>
+            <Helmet>
+                <title>Prissättning - Våra prispaket</title>
+                <meta name="description" content="Detta är priserna för våra tjänster. Vi erbjuder ett brett utbud av tjänster som passar alla behov. Vi erbjuder även en gratis konsultation där vi går igenom dina behov och ger dig en uppskattning på pris." />
+            </Helmet>
             <div className='pricing-screen'>
                 <h1>Prissättning</h1>
-                <h2>Våra prispaket</h2>
-                <p>Priserna nedan är ungefärliga och varierar beroende på storlek och tid som projektet tar.</p>
-                <p>För en bättre uppskattning på pris, <RouterLink to='/contact' variant='link' arrow>Kontakta Oss</RouterLink></p>
-                <table>
+                <motion.h2 initial={{opacity: 0, translateX: "-100%"}} animate={{opacity: 1, translateX: 0}}>Våra prispaket</motion.h2>
+                <motion.p initial={{opacity: 0, translateY: "100%"}} animate={{opacity: 1, translateY: 0}} transition={{delay: 0.2}}>Priserna nedan är ungefärliga och varierar beroende på storlek och tid som projektet tar.</motion.p>
+                <motion.p initial={{opacity: 0, translateY: "100%"}} animate={{opacity: 1, translateY: 0}} transition={{delay: 0.4}}>För en bättre uppskattning på pris, <RouterLink to='/contact' variant='link' arrow>Kontakta Oss</RouterLink></motion.p>
+                <motion.table initial={{opacity: 0, translateY: "20%"}} animate={{opacity: 1, translateY: 0}} transition={{delay: 0.6}}>
                     <thead>
                         <tr>
                             <th></th>
@@ -104,7 +110,7 @@ const Pricing = () => {
                             </td>
                         </tr>
                     </tbody>
-                </table>
+                </motion.table>
             </div>
         </AnimatedPage>
     )

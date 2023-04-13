@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { AnimatedPage, Button, RouterLink } from '../../components'
 import './Error404.scss'
 import { useNavigate } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 
 const Error404 = () => {
 
@@ -25,6 +26,10 @@ const Error404 = () => {
 
     return (
         <AnimatedPage>
+            <Helmet>
+                <title>404 Error - Vi saknar denna sida</title>
+                <meta name="description" content="Tyvärr, sidan du letar efter finns inte eller har flyttats" />
+            </Helmet>
             <div className='error404'>
                 <span>404 Error</span>
                 <h1>Vi saknar denna sida</h1>
