@@ -15,8 +15,8 @@ const Portfolio = () => {
                 <h1>Portfolio</h1>
                 <motion.h2 initial={{opacity: 0, translateY: "100%"}} animate={{opacity: 1, translateY: 0}}>Se några av våra senaste projekt</motion.h2>
                 <ul className="projects">
-                    <Project title='Volted' type='Mobilapplikation' image='/Images/Volted.png' i={0} />
-                    <Project title='Workflow' type='Webbapplikation' image='/Images/Workflow.png' i={1} />
+                    <Project title='Volted' type='Mobilapplikation' image='/Images/Volted.webp' i={0} />
+                    <Project title='Workflow' type='Webbapplikation' image='/Images/Workflow.webp' i={1} />
                 </ul>
             </section>
         </AnimatedPage>

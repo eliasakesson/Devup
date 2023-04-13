@@ -295,8 +295,8 @@ const Portfolio = () => {
             <h2>Portfolio</h2>
             <h3>Se några av våra senaste projekt</h3>
             <ul className="projects">
-                <Project image='/Images/Volted.png' i={0} />
-                <Project image='/Images/Workflow.png' i={1} />
+                <Project image='/Images/Volted.webp' i={0} />
+                <Project image='/Images/Workflow.webp' i={1} />
             </ul>
             <RouterLink to='/portfolio' variant='link' arrow>Se fler projekt</RouterLink>
         </section>

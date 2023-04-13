@@ -10,7 +10,7 @@ const Footer = () => {
                 <div className="info">
                     <Link style={{textDecoration: "none"}} to="/">
                         <div className="logo">
-                            <img src='/logo.png' alt='' />
+                            <img src='/Images/Logo.webp' alt='' />
                             <h2>DevUp</h2>
                         </div>
                     </Link>
