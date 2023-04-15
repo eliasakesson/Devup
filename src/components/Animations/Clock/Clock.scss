@@ -1,0 +1,67 @@
+@import '../../../index.scss';
+
+.clock{
+    position: relative;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    outline: 4px solid black;
+
+    .center{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 0.25rem;
+        height: 0.25rem;
+        border-radius: 50%;
+        background-color: $primary;
+    }
+
+    .hour{
+        width: 4px;
+        background-color: $primary;
+        position: absolute;
+        top: 2.3rem;
+        bottom: 2.3rem;
+        left: 50%;
+        border-radius: 2px;
+        transform: translate(-50%, -50%);
+        transform-origin: center left;
+        animation: hour 3s ease-in-out infinite;
+    }
+
+    .minute{
+        width: 4px;
+        background-color: $primary;
+        position: absolute;
+        top: 1.8rem;
+        bottom: 1.8rem;
+        left: 50%;
+        border-radius: 2px;
+        transform: translate(-50%, -50%);
+        transform-origin: center left;
+        animation: minute 3s ease-in-out infinite;
+    }
+
+    @keyframes hour {
+        from {
+            rotate: 30deg;
+        }
+        50%{
+            rotate: 110deg;
+        }
+        to {
+            rotate: 30deg;
+        }
+    }
+
+    @keyframes minute {
+        from {
+            rotate: 0deg;
+        }
+        to {
+            rotate: 360deg;
+        }
+    }
+}

@@ -37,8 +37,8 @@
             border-radius: 50%;
             transform: translate(-50%, -50%);
             transform-origin: top left;  
-            top: 20%;
-            left: 70%;
+            top: 30%;
+            left: 60%;
             z-index: -1;
             background: linear-gradient(
                 to right,
@@ -76,7 +76,7 @@
 
         .right{
             flex: 1;
-            margin-top: 10vh;
+            margin-top: 15vh;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
@@ -320,6 +320,7 @@
             flex-direction: column;
             gap: 2rem;
             align-items: center;
+            margin-top: 5vh;
 
             h3{
                 color: $text-header;

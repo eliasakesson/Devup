@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { Anchor, AnimatedPage, Button, RouterLink } from '../../components';
+import { AnimatedPage, Button, Checkmark, Clock, RouterLink, Sliders } from '../../components';
 import './Home.scss';
 import { MdDesignServices, MdCode, MdDeveloperMode, MdChevronRight, MdChevronLeft } from 'react-icons/md';
 import { RiDoubleQuotesL } from 'react-icons/ri';
@@ -206,10 +206,12 @@ const WhyUs = () => {
             }}>Betala bara för den tid du behöver och få högkvalitativa resultat<br /> som överträffar dina förväntningar."</motion.p>
             <div ref={midRef} className="grid">
                 <div className="item">
-                    <motion.img animate={midControls} transition={{delay: 0.2}} variants={{
+                    <motion.div animate={midControls} transition={{delay: 0.2}} variants={{
                         visible: {opacity: 1, translateY: 0},
                         hidden: {opacity: 0, translateY: "100%"},
-                    }} src='/Gifs/Clock.gif' alt='Klocka' />
+                    }}>
+                        <Clock />
+                    </motion.div>
                     <motion.h3 animate={midControls} transition={{delay: 0.4}} variants={{
                         visible: {opacity: 1, translateY: 0},
                         hidden: {opacity: 0, translateY: "100%"},
@@ -217,35 +219,39 @@ const WhyUs = () => {
                     <motion.p animate={midControls} transition={{delay: 0.6}} variants={{
                         visible: {opacity: 1, translateY: 0},
                         hidden: {opacity: 0, translateY: "100%"},
-                    }}>Vi är snabba och effektiva, vilket betyder att du får din hemsida inom några dagar i genomsnitt.</motion.p>
+                    }}>Vi arbetar effektivt för att leverera högkvalitativa projekt i tid, på några dagar i genomsnitt.</motion.p>
                 </div>
                 <div className="item">
-                    <motion.img animate={midControls} transition={{delay: 0.4}} variants={{
+                    <motion.div animate={midControls} transition={{delay: 0.2}} variants={{
                         visible: {opacity: 1, translateY: 0},
                         hidden: {opacity: 0, translateY: "100%"},
-                    }} src='/Gifs/Consult.gif' alt='Klocka' />
+                    }}>
+                        <Checkmark />
+                    </motion.div>
                     <motion.h3 animate={midControls} transition={{delay: 0.6}} variants={{
                         visible: {opacity: 1, translateY: 0},
                         hidden: {opacity: 0, translateY: "100%"},
-                    }}>Teamwork</motion.h3>
+                    }}>Kvalitet</motion.h3>
                     <motion.p animate={midControls} transition={{delay: 0.8}} variants={{
                         visible: {opacity: 1, translateY: 0},
                         hidden: {opacity: 0, translateY: "100%"},
-                    }}>Dina idéer är viktiga för oss, så vi kommer att arbeta tillsammans med dig för att skapa det bästa resultatet.</motion.p>
+                    }}>Vi upprätthåller höga standarder i vårt arbete genom att använda bästa praxis och kvalitetsverktyg.</motion.p>
                 </div>
                 <div className="item">
-                    <motion.img animate={midControls} transition={{delay: 0.6}} variants={{
+                    <motion.div animate={midControls} transition={{delay: 0.2}} variants={{
                         visible: {opacity: 1, translateY: 0},
                         hidden: {opacity: 0, translateY: "100%"},
-                    }} src='/Gifs/Document.gif' alt='Klocka' />
+                    }}>
+                        <Sliders />
+                    </motion.div>
                     <motion.h3 animate={midControls} transition={{delay: 0.8}} variants={{
                         visible: {opacity: 1, translateY: 0},
                         hidden: {opacity: 0, translateY: "100%"},
-                    }}>Innehåll</motion.h3>
+                    }}>Anpassningsbarhet</motion.h3>
                     <motion.p animate={midControls} transition={{delay: 1}} variants={{
                         visible: {opacity: 1, translateY: 0},
                         hidden: {opacity: 0, translateY: "100%"},
-                    }}>Våra webbplatser är optimerade för sökmotorer, vilket gör att ditt innehåll kan nå fler kunder.</motion.p>
+                    }}>Vi arbetar med olika teknologier och plattformar för att uppfylla dina specifika behov.</motion.p>
                 </div>
             </div>
             <div ref={bottomRef} className="next-step">
