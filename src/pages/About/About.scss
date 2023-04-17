@@ -18,8 +18,8 @@
         width: 100%;
         margin-top: 5vh;
         display: flex;
-        flex-wrap: wrap;
-        gap: 5vw;
+        flex-wrap: wrap-reverse;
+        gap: 5vh;
     
         .map{
             height: 50vh;
@@ -56,11 +56,14 @@
         }
         
         .text{
-            width: 50%;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             gap: 2vh;
+
+            p{
+                font-size: clamp(1rem, 2vw, 1.25rem);
+            }
         }
     }
 }

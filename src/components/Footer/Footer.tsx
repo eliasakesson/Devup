@@ -21,7 +21,7 @@ const Footer = () => {
                 <div className="links">
                     <h3>Navigation</h3>
                     <RouterLink to='/portfolio' variant='link'>Portfolio</RouterLink>
-                    <RouterLink to='/prices' variant='link'>Prissättning</RouterLink>
+                    <RouterLink to='/pricing' variant='link'>Prissättning</RouterLink>
                     <RouterLink to='/about' variant='link'>Om oss</RouterLink>
                     <RouterLink to='/contact' variant='link'>Kontakt</RouterLink>
                 </div>
