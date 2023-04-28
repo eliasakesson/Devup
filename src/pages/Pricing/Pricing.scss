@@ -2,120 +2,186 @@
 
 .pricing-screen{
     padding: 10vh 10vw;
+    display: flex;
+    flex-direction: column;
+    gap: 10vh;
 
-    h1{
-        font-size: clamp(1rem, 3vw, 1.5rem);
-        color: $primary;
-    }
-
-    h2{
-        font-size: clamp(1rem, 5vw, 2.5rem);
-	    color: $text-header;
-    }
-
-    p{
-        font-size: clamp(0.8rem, 1vw, 1rem);
-        color: $text;
-        margin-top: 2rem;
-        max-width: 75ch;
-    }
-
-    table{
+    .hero-text{
         display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        margin: 5vh 0;
+        justify-content: space-between;
 
-        thead, tbody{
-            display: flex;
-            flex-direction: column;
+        .left{
+            h1{
+                font-size: clamp(1rem, 3vw, 1.5rem);
+                color: $primary;
+            }
+            
+            h2{
+                font-size: clamp(1rem, 5vw, 2.5rem);
+                color: $text-header;
+                max-width: 20ch;
+            }
         }
 
-        tr{
-            display: flex;
-            
-            th, td{
-                flex: 1;
-                text-align: left;
-                padding: 1rem;
-                border: 1px solid $border;
+        .right{
 
-                ul{
-                    list-style: none;
-                    display: flex;
-                    flex-direction: column;
-                    gap: 0.5rem;
+            p{
+                font-size: clamp(0.8rem, 1vw, 1rem);
+                color: $text;
+                margin-top: 1rem;
+                max-width: 50ch;
+                text-align: end;
 
-                    color: #555;
-                    
-                    li::before{
-                        content: '✓';
-                        font-weight: 700;
-                        color: $primary;
-                        margin-right: 0.5rem;
-                    }
-                }
-
-                span{
-                    background-color: $primary-bg;
-                    color: $text-header;
-                    font-weight: 700;
-                    font-size: clamp(1rem, 2vw, 1.5rem);
-                    margin-top: auto;
-                    padding: 0.5rem 1rem;
-                    width: fit-content;
-
-                    &::after{
-                        content: ' kr';
-                        font-weight: 400;
-                        font-size: clamp(0.75rem, 1.5vw, 1rem);
-                    }
-                }
-            }
-
-            th{
-                font-weight: 600;
-                font-size: clamp(1rem, 2vw, 1.25rem);
-                background-color: $primary-bg;
-                color: $text-header;
-                border: none;
-
-                &:not(:first-child){
-                    flex: 2;
-                }
-            }
-
-            td h3{
-                margin-right: 1rem;
-                border: none;
-                font-weight: 600;
-                font-size: 1.25rem;
-            }
-
-            td h4{
-                font-size: clamp(1rem, 2vw, 1.25rem);
-            }
-
-            td:not(:first-child){
-                flex: 2;
                 display: flex;
                 flex-direction: column;
-                gap: 2rem;
+                align-items: flex-end;
+                gap: .5rem;
             }
         }
 
-        @media screen and (max-width: 1200px){
-            tr{
+        @media screen and (max-width: 768px){
+            flex-direction: column;
+
+            .right p{
+                align-items: flex-start;
+                text-align: start;
+            }
+        }
+    }
+
+    .packages{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+
+        .package{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            background-color: $border;
+            border-radius: $radius;
+            padding: 2rem;
+            border: 1px solid $border;
+
+            .tag{
+                background-color: #ccc;
+                color: $text-header;
+                padding: .1rem .5rem;
+                border-radius: calc($radius / 2);
+                font-size: clamp(0.8rem, 1vw, 1rem);
+                width: fit-content;
+                font-weight: 600;
+            }
+
+            .from{
+                font-size: clamp(0.8rem, 1vw, 1rem);
+                color: $text;
+                margin-top: 1rem;
+            }
+
+            .price{
+                font-size: clamp(1.5rem, 3vw, 2rem);
+                color: $text-header;
+            }
+
+            ul{
+                margin-top: 1rem;
+                padding-top: 1rem;
+                border-top: 2px solid #ccc;
+                list-style: none;
+                display: flex;
                 flex-direction: column;
+                gap: 1rem;
+
+                li{
+                    display: flex;
+                    gap: 1rem;
+                    font-size: clamp(0.8rem, 1vw, 1rem);
+                    color: $text;
+
+                    &::before{
+                        content: '✓';
+                    }
+                }
             }
 
-            thead{
-                display: none;
+            &:nth-child(2){
+                background-color: white;
+
+                .tag{
+                    background-color: $primary-bg;
+                    color: $primary;
+                }
+
+                .price{
+                    color: $primary;
+                }
+
+                ul{
+                    border-color: $border;
+                }
+
+                &::after{
+                    content: 'Populär';
+                    position: absolute;
+                    top: -.75rem;
+                    right: 2rem;
+                    background-color: $primary;
+                    color: white;
+                    padding: .1rem .5rem;
+                    border-radius: calc($radius / 2);
+                    font-size: clamp(1rem, 1.5vw, 1.2rem);
+                    font-weight: 600;
+                    rotate: 15deg;
+                }
             }
 
-            tbody{
-                gap: 2rem;
+            &:nth-child(3){
+                background-color: #2C2C2C;
+                color: white;
+
+                .tag{
+                    background-color: white;
+                    color: $text-header;
+                }
+
+                .from{
+                    color: $border;
+                }
+
+                .price{
+                    color: white;
+                }
+
+                ul{
+                    border-color: $text;
+
+                    li{
+                        color: $border;
+                    }
+                }
             }
+        }
+    }
+
+    .lower-text{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 5vh;
+
+        h2{
+            font-size: clamp(1rem, 5vw, 2.5rem);
+            color: $text-header;
+            text-align: center;
+        }
+
+        p{
+            font-size: clamp(0.8rem, 1vw, 1rem);
+            color: $text;
+            max-width: 50ch;
+            text-align: center;
         }
     }
 }

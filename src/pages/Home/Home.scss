@@ -46,7 +46,7 @@
                 rgb(213, 193, 254)
             );
             animation: rotate 20s linear infinite;
-            filter: blur(250px);
+            filter: blur(200px);
         }
     
         @keyframes rotate{
@@ -60,10 +60,77 @@
                 rotate: 360deg;
             }
         }
+
+        .animated-blob{
+            position: absolute;
+            width: 25vw;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transform-origin: top left;  
+            top: 30%;
+            left: 60%;
+            z-index: -1;
+            background: linear-gradient(
+                to right,
+                rgb(207, 255, 239),
+                rgb(193, 193, 254)
+            );
+            animation: animation 10s infinite linear;
+            filter: blur(150px);
+        }
+
+        @keyframes animation{
+            0%{
+                top: 30%;
+                left: 60%;
+            }
+            10%{
+                top: 50%;
+                left: 70%;
+            }
+            20%{
+                top: 60%;
+                left: 50%;
+            }
+            30%{
+                top: 40%;
+                left: 40%;
+            }
+            40%{
+                top: 30%;
+                left: 30%;
+            }
+            50%{
+                top: 50%;
+                left: 20%;
+            }
+            60%{
+                top: 60%;
+                left: 20%;
+            }
+            70%{
+                top: 40%;
+                left: 30%;
+            }
+            80%{
+                top: 30%;
+                left: 40%;
+            }
+            90%{
+                top: 20%;
+                left: 50%;
+            }
+            100%{
+                top: 30%;
+                left: 60%;
+            }
+        }
     }
 
     .help{
         display: flex;
+        flex-direction: column;
         gap: 2rem;
         padding: 10vh 20vw;
         background-color: $primary-bg;
@@ -72,28 +139,33 @@
             flex: 1;
             font-size: clamp(1rem, 5vw, 2.5rem);
             color: $text-header;
+            max-width: 60%;
         }
 
-        .right{
+        .bottom{
             flex: 1;
-            margin-top: 15vh;
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
-            gap: 2rem;
+            align-items: flex-end;
+            align-self: flex-end;
+            gap: 1rem;
+            max-width: 60%;
 
             p{
                 font-size: clamp(1rem, 1vw, 1.2rem);
                 color: $text;
+                text-align: end;
             }
         }
 
         @media screen and (max-width: 1200px){
-            flex-direction: column;
-            gap: 5vh;
 
-            .right{
-                margin-top: 0;
+            h2{
+                max-width: 100%;
+            }
+            
+            .bottom{
+                max-width: 100%;
             }
         }
     }
@@ -378,6 +450,7 @@
             gap: 2rem;
             margin-top: 5vh;
             padding-bottom: 8rem;
+            width: 80%;
 
             .project{
                 width: 100%;
@@ -403,77 +476,115 @@
             }
 
             @media screen and (max-width: 1200px){
+                width: 100%;
+            }
+
+            @media screen and (max-width: 1024px){
                 grid-template-columns: repeat(1, minmax(300px, 1fr));
+                width: 80%;
+            }
+
+            @media screen and (max-width: 768px){
+                width: 100%;
             }
         }
     }
 
     .pricing{
-        padding: 0 10vw;
+        padding: 10vh 10vw;
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
+        justify-content: space-between;
+        gap: 5vw;
 
-        p{
-            font-size: clamp(0.8rem, 1vw, 1rem);
-            color: $text;
-            margin-top: 2rem;
-            max-width: 75ch;
-            text-align: center;
+        .left{
+            h3{
+                max-width: 25ch;
+            }
+
+            a{
+                margin-top: 2rem;
+            }
         }
+ 
+        .right{
+            a{
+                text-decoration: none;
 
-        .cards{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 1rem;
-            margin: 3vh 0;
-            
-            .card{
-                border: 1px solid $border;
-                background-color: white;
-                border-radius: $radius;
-                padding: 2rem;
-                display: flex;
-                flex-direction: column;
-                gap: 2rem;
-                flex: 1;
-    
-                ul{
-                    list-style: none;
+                .package{
+                    position: relative;
                     display: flex;
                     flex-direction: column;
-                    gap: 0.5rem;
+                    background-color: white;
+                    border-radius: $radius;
+                    padding: 2rem;
+                    border: 1px solid $border;
+                    width: clamp(250px, 30vw, 600px);
     
-                    color: #555;
-                    
-                    li::before{
-                        content: '✓';
-                        font-weight: 700;
-                        color: $primary;
-                        margin-right: 0.5rem;
+                    .tag{
+                        background-color: $border;
+                        color: $text;
+                        padding: .1rem .5rem;
+                        border-radius: calc($radius / 2);
+                        font-size: clamp(0.8rem, 1vw, 1rem);
+                        width: fit-content;
+                        font-weight: 600;
                     }
-                }
-    
-                span{
-                    background-color: $primary-bg;
-                    color: $text-header;
-                    font-weight: 700;
-                    font-size: clamp(1rem, 2vw, 1.5rem);
-                    margin-top: auto;
-                    padding: 0.5rem 1rem;
-                    width: fit-content;
-    
-                    &::after{
-                        content: ' kr';
-                        font-weight: 400;
-                        font-size: clamp(0.75rem, 1.5vw, 1rem);
+        
+                    .from{
+                        font-size: clamp(0.8rem, 1vw, 1rem);
+                        color: $text;
+                        margin-top: 1rem;
+                    }
+        
+                    .price{
+                        font-size: clamp(1.5rem, 3vw, 2rem);
+                        color: $text-header;
+                    }
+        
+                    ul{
+                        margin-top: 1rem;
+                        padding-top: 1rem;
+                        border-top: 2px solid #ccc;
+                        list-style: none;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 1rem;
+        
+                        li{
+                            display: flex;
+                            gap: 1rem;
+                            font-size: clamp(0.8rem, 1vw, 1rem);
+                            color: $text;
+        
+                            &::before{
+                                content: '✓';
+                            }
+                        }
                     }
                 }
             }
         }
 
+        @media screen and (max-width: 768px){
+            flex-direction: column;
+            align-items: center;
+            gap: 5vh;
+
+            .left{
+                text-align: center;
+
+                a{
+                    justify-content: center;
+                }
+            }
+
+            .right{
+                width: 100%;
+                .package{
+                    width: 100%;
+                }
+            }
+        }
     }
 
     .contact{
@@ -484,7 +595,8 @@
         margin-bottom: 16vh;
 
         > div{
-            margin-top: 4vh;
+            margin-top: 10vh;
+            display: flex;
         }
     }
 }
