@@ -60,7 +60,7 @@ const Contact = () => {
                         <label htmlFor="subject">Ämne</label>
                     </div>
                     <div className="input-group">
-                        <textarea name="message" id="message" cols={30} rows={5} placeholder=' ' required></textarea>
+                        <textarea name="message" id="message" cols={30} rows={10} placeholder=' ' required></textarea>
                         <label htmlFor="message">Meddelande</label>
                     </div>
                     <div className="row">

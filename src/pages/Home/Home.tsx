@@ -303,8 +303,8 @@ const Portfolio = () => {
             <h2>Portfolio</h2>
             <h3>Se några av våra senaste projekt</h3>
             <ul className="projects">
-                <Project image='/Images/Volted.webp' i={0} />
-                <Project image='/Images/Workflow.webp' i={1} />
+                <Project image='/Images/Alvesta-el.webp' i={0} />
+                <Project image='/Images/Volted.webp' i={1} />
             </ul>
             <RouterLink to='/portfolio' variant='link' arrow>Se fler projekt</RouterLink>
         </section>
@@ -321,7 +321,9 @@ const Project = ({ image, i } : { image: string, i: number }) => {
             visible: {opacity: 1, translateY: 0},
             hidden: {opacity: 0, translateY: "20%"},
         }}>
-            <img src={image} alt="" />
+            <Link to='/portfolio'>
+                <img src={image} alt="" />
+            </Link>
         </motion.li>
     );
 };

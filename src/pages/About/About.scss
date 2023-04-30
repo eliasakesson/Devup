@@ -3,67 +3,114 @@
 .about-screen{
     padding: 10vh 10vw;
     min-height: calc(100vh - $navbar-height);
-
-    h1{
-        font-size: clamp(1rem, 3vw, 1.5rem);
-        color: $primary;
-    }
-
-    h2{
-        font-size: clamp(1rem, 5vw, 2.5rem);
-	    color: $text-header;
-    }
+    display: flex;
+    flex-direction: column;
+    gap: calc(5vh + 5vw);
     
-    .wrapper{
-        width: 100%;
-        margin-top: 5vh;
+    .hero{
         display: flex;
-        flex-wrap: wrap-reverse;
-        gap: 5vh;
-    
-        .map{
-            height: 50vh;
-            width: 50vh;
-            max-width: 80vw;
-            max-height: 80vw;
-            overflow: hidden;
-            border-radius: 2vh;
-            box-shadow: $soft-shadow;
-            background-color: $primary-bg;
-        
-            svg{
-                width: 100%;
-                height: 100%;
-            }
-        
-            .countries path{
-                fill: $primary;
-                outline: none;
-                stroke: $primary-bg;
-                stroke-width: 0.25;
-            }
-        
-            .marker text{
-                fill: $text-header;
-                font-size: 0.15rem;
-                font-weight: 600;
-                pointer-events: none;
-            }
-        
-            .marker g{
-                stroke: $text-header;
-            }
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+
+        h1{
+            text-align: center;
+            font-size: clamp(1rem, 3vw, 1.5rem);
+            color: $primary;
         }
-        
-        .text{
+    
+        h2{
+            text-align: center;
+            font-size: clamp(2rem, 4vw, 4rem);
+            color: $text-header;
+            max-width: 30ch;
+        }
+    
+        p{
+            text-align: center;
+            max-width: 80ch;
+            font-size: clamp(1rem, 1.5vw, 1.2rem);
+        }
+    }
+    
+    .about{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5vw;
+
+        .member{
+            flex: 1;
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
-            gap: 2vh;
+            align-items: center;
+            max-width: 30vh;
+
+            img{
+                width: 100%;
+                aspect-ratio: 1/1;
+                border-radius: $radius;
+                object-fit: cover;
+                margin-bottom: 1rem;
+            }
+
+            h3{
+                font-size: clamp(1.5rem, 2vw, 2rem);
+                color: $text-header;
+            }    
+        }
+
+        .text{
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            max-width: 60ch;
+
+            h2{
+                font-size: clamp(1.5rem, 2vw, 2rem);
+                color: $text-header;
+            }
 
             p{
-                font-size: clamp(1rem, 2vw, 1.25rem);
+                font-size: clamp(1rem, 1.5vw, 1.2rem);
             }
+        }
+
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+            gap: 5vh;
+
+            .member{
+                width: 100%;
+            }
+
+            .text{
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+
+    .contact{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+
+        h2{
+            font-size: clamp(1.5rem, 2vw, 2rem);
+            color: $text-header;
+        }
+
+        p{
+            text-align: center;
+            max-width: 80ch;
+            font-size: clamp(1rem, 1.5vw, 1.2rem);
+        }
+
+        a{
+            margin-top: 5vh;
         }
     }
 }

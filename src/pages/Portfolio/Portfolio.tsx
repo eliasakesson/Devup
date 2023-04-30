@@ -15,15 +15,16 @@ const Portfolio = () => {
                 <h1>Portfolio</h1>
                 <motion.h2 initial={{opacity: 0, translateY: "100%"}} animate={{opacity: 1, translateY: 0}}>Se några av våra senaste projekt</motion.h2>
                 <ul className="projects">
-                    <Project title='Volted' type='Mobilapplikation' image='/Images/Volted.webp' i={0} />
-                    <Project title='Workflow' type='Webbapplikation' image='/Images/Workflow.webp' i={1} />
+                    <Project title='Alvesta El' type='Webbsida' image='/Images/Alvesta-el.webp' i={0} inDev />
+                    <Project title='Volted' type='Mobilapplikation' image='/Images/Volted.webp' i={1} />
+                    <Project title='Workflow' type='Webbapplikation' image='/Images/Workflow.webp' i={2} />
                 </ul>
             </section>
         </AnimatedPage>
     );
 };
 
-const Project = ({ title, type, image, i } : { title: string, type: string, image: string, i: number }) => {
+const Project = ({ title, type, image, inDev, i } : { title: string, type: string, image: string, inDev?: boolean, i: number }) => {
     return (
         <li className="project">
             <motion.div className="image" initial={{opacity: 0, translateY: "20%"}} animate={{opacity: 1, translateY: 0}} transition={{delay: 0.2 * (i + 1)}}>
@@ -32,6 +33,7 @@ const Project = ({ title, type, image, i } : { title: string, type: string, imag
             <div className="text">
                 <motion.h4 initial={{opacity: 0, translateY: "100%"}} animate={{opacity: 1, translateY: 0}} transition={{delay: 0.2 * (i + 2)}}>{title}</motion.h4>
                 <motion.p initial={{opacity: 0, translateY: "100%"}} animate={{opacity: 1, translateY: 0}} transition={{delay: 0.2 * (i + 3)}}>{type}</motion.p>
+                {inDev && <span className='tag'>Under utveckling</span>}
             </div>
         </li>
     );

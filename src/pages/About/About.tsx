@@ -1,18 +1,9 @@
 import { AnimatedPage, RouterLink } from '../../components';
 import './About.scss';
-import {
-    ComposableMap,
-    Geographies,
-    Geography,
-    ZoomableGroup,
-    Marker
-} from "react-simple-maps"
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 
 const About = () => {
-
-    const geoUrl = "https://raw.githubusercontent.com/deldersveld/topojson/master/continents/europe.json";
 
     return (
         <AnimatedPage>
@@ -21,49 +12,26 @@ const About = () => {
                 <meta name="description" content="Vi är DevUp. Vi är ett företag som erbjuder tjänster inom webbdesign, webbutveckling och mobilapplikationer." />
             </Helmet>
             <div className='about-screen'>
-                <h1>Om oss</h1>
-                <motion.h2 initial={{opacity: 0, translateX: "-100%"}} animate={{opacity: 1, translateX: 0}}>Vi är DevUp</motion.h2>
-                <div className="wrapper">
-                    <motion.div initial={{opacity: 0, translateX: "-100%"}} animate={{opacity: 1, translateX: 0}} transition={{delay: 0.4}} className="map">
-                        <ComposableMap projection="geoMercator">
-                            <ZoomableGroup center={[14.5, 57]} zoom={10} maxZoom={15} minZoom={5}>
-                                <Geographies className="countries" geography={geoUrl}>
-                                    {({ geographies }) =>
-                                    geographies.map((geo) => (
-                                        <Geography key={geo.rsmKey} geography={geo} />
-                                    ))
-                                    }
-                                </Geographies>
-                                <Marker className="marker" coordinates={[14.5, 57]}>
-                                    <g
-                                        fill="none"
-                                        stroke="#FF5533"
-                                        strokeWidth="1"
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        transform="translate(-4.8, -9.6) scale(0.4)"
-                                    >
-                                        <circle cx="12" cy="10" r="3" />
-                                        <path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 6.9 8 11.7z" />
-                                    </g>
-                                    <text
-                                        textAnchor="middle"
-                                        y={3}
-                                    >
-                                        Värnamo, Sverige
-                                    </text>
-                                </Marker>
-                            </ZoomableGroup>
-                        </ComposableMap>
+                <div className="hero">
+                    <h1>Om oss</h1>
+                    <motion.h2 initial={{opacity: 0, translateY: "100%"}} animate={{opacity: 1, translateY: 0}}>Hej. Vi är Devup</motion.h2>
+                    <motion.p initial={{opacity: 0, translateY: "100%"}} animate={{opacity: 1, translateY: 0}} transition={{delay: 0.2}}>Vi är en solobaserad webbutvecklingsbyrå som strävar efter att erbjuda innovativa lösningar för att hjälpa företag och organisationer att bygga en stark närvaro online. Vår målsättning är att förse våra kunder med högkvalitativt arbete som är anpassat efter deras individuella behov och mål.</motion.p>
+                </div>
+                <div className="about">
+                    <motion.div className="member" initial={{opacity: 0, translateX: "-100%"}} animate={{opacity: 1, translateX: 0}} transition={{delay: 0.8}}>
+                        <img src="/Images/me.JPG" alt="Bild på medlem" />
+                        <h3>Elias</h3>
+                        <p>VD / Utvecklare</p>
                     </motion.div>
                     <div className="text">
-                        <motion.h3 initial={{opacity: 0, translateY: "100%"}} animate={{opacity: 1, translateY: 0}} transition={{delay: 0.2}}>Om oss</motion.h3>
-                        <motion.p initial={{opacity: 0, translateY: "100%"}} animate={{opacity: 1, translateY: 0}} transition={{delay: 0.4}}>Vi är en webbutvecklingsbyrå som ligger i Värnamo, Sverige.</motion.p>
-                        <motion.p initial={{opacity: 0, translateY: "100%"}} animate={{opacity: 1, translateY: 0}} transition={{delay: 0.6}}>Vår passion är att skapa hemsidor som är användarvänliga,<br /> och som uppmanar till köp.</motion.p>
-                        <motion.div initial={{opacity: 0, translateY: "100%"}} animate={{opacity: 1, translateY: 0}} transition={{delay: 0.8}}>
-                            <RouterLink variant='link' to="/contact" arrow>Kontakta Oss</RouterLink>
-                        </motion.div>
+                        <motion.h2 initial={{opacity: 0, translateY: "100%"}} animate={{opacity: 1, translateY: 0}} transition={{delay: 0.4}}>Om mig</motion.h2>
+                        <motion.p initial={{opacity: 0, translateY: "100%"}} animate={{opacity: 1, translateY: 0}} transition={{delay: 0.6}}>Som en enskild utvecklare och designer, är jag fast besluten att tillhandahålla den bästa möjliga service och att säkerställa att mina kunder är nöjda med mitt arbete. Med min expertis inom webbutveckling och design, är jag säker på att jag kan hjälpa ditt företag att nå sina mål på en stark och framgångsrik online-plattform.</motion.p>
                     </div>
+                </div>
+                <div className="contact">
+                    <h2>Kontakta oss</h2>
+                    <p>Vi är alltid öppna för nya projekt och samarbeten. Om du är intresserad av att arbeta med oss, tveka inte att kontakta oss.</p>
+                    <RouterLink to='/contact' variant='primary'>Kontakta oss</RouterLink>
                 </div>
             </div>
         </AnimatedPage>

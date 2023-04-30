@@ -54,13 +54,13 @@
                 display: flex;
                 align-items: center;
                 gap: 2vw;
-            }
 
-            &:hover{
-                .image{
-                    img{
-                        transform: scale(1.05);
-                    }
+                .tag{
+                    margin-left: auto;
+                    background-color: $secondary-bg;
+                    color: $secondary;
+                    padding: 0.25rem 1rem;
+                    border-radius: $radius;
                 }
             }
         }
