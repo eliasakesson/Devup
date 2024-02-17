@@ -4,7 +4,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/eliasakesson/devup">
-    <img src="public/Images/Logo.webp" alt="Logo" width="120" height="120">
+    <img src="https://raw.githubusercontent.com/eliasakesson/Devup/main/public/Images/Logo.webp" alt="Logo" width="120" height="120">
   </a>
 
   <h3 align="center">Devup</h3>
@@ -13,7 +13,7 @@
     React & Vite site for web development agency
     <br />
     <br />
-    <a href="https://github.com/eliasakesson/devup"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/eliasakesson/devup"><strong>Explore the docs</strong></a>
     <br />
     <br />
     <a href="https://www.devupweb.vercel.app">View App</a>
@@ -23,9 +23,9 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<div style="display:flex">
-  <img src="public/Images/home-page.png" alt="" width="49%" />
-  <img src="public/Images/features.png" alt="" width="49%" />
+<div style="display:flex;gap:8px">
+  <img src="https://raw.githubusercontent.com/eliasakesson/Devup/main/public/Images/home-page.png" alt="" width="49%" />
+  <img src="https://raw.githubusercontent.com/eliasakesson/Devup/main/public/Images/features.png" alt="" width="49%" />
 </div>
 
 ### Devup
@@ -62,9 +62,10 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-<a href="https://www.linkedin.com/in/eliasakesson/" target="blank"><img align="center" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/800px-LinkedIn_logo_initials.png" alt="Elias Åkesson" height="40" width="40"/></a>
-.
-<a href="https://github.com/eliasakesson" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/github.svg" alt="Elias Åkesson" height="40" width="40" /></a>
+<div style="display:flex;gap:8px">
+  <a href="https://www.linkedin.com/in/eliasakesson/" target="blank"><img align="center" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/800px-LinkedIn_logo_initials.png" alt="Elias Åkesson" height="40" width="40"/></a>
+  <a href="https://github.com/eliasakesson" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/github.svg" alt="Elias Åkesson" height="40" width="40" /></a>
+</div>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
